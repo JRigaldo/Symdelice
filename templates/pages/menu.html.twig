@@ -1,0 +1,158 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Iceroll-Delice Menu{% endblock %}
+
+{% block body %}
+    <main>
+        {{ include("partials/_social-header.html.twig") }}
+        <div class="background-gradient-2"></div>
+        <section>
+            <div class="container splash align-items-center align-items-center-medium-up align-items-center-medium-down">
+                <div class="mt-20 mb-100 mb-small-10">
+                    <h1 class="txt-c txt-white banner-title">LA GALERIE DES GLACES ROULÉES DES DESSERTS À VOLONTÉS POUR TOUS LES GOÛTS</h1>
+                    <a href="#" class="btn-flex absolute-bottom-center">
+                        <button class="btn btn-primary chevron-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.422" height="19.636"
+                                 viewBox="0 0 33.422 19.636">
+                                <path id="keyboard_double_arrow_down_FILL0_wght400_GRAD0_opsz48"
+                                      d="M28.711,30.886,12,14.174l2.924-2.924L28.711,25.037,42.5,11.25l2.924,2.924Z"
+                                      transform="translate(-12 -11.25)" fill="#fff"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.422" height="19.636"
+                                 viewBox="0 0 33.422 19.636">
+                                <path id="keyboard_double_arrow_down_FILL0_wght400_GRAD0_opsz48"
+                                      d="M28.711,30.886,12,14.174l2.924-2.924L28.711,25.037,42.5,11.25l2.924,2.924Z"
+                                      transform="translate(-12 -11.25)" fill="#fff"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.422" height="19.636"
+                                 viewBox="0 0 33.422 19.636">
+                                <path id="keyboard_double_arrow_down_FILL0_wght400_GRAD0_opsz48"
+                                      d="M28.711,30.886,12,14.174l2.924-2.924L28.711,25.037,42.5,11.25l2.924,2.924Z"
+                                      transform="translate(-12 -11.25)" fill="#fff"/>
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="rollair">
+                <img src="{{ asset('/images/rollair-1-250.png') }}" class="rollair-1" style="var(--x:1)" alt="rouleau aérien un">
+                <img src="{{ asset('/images/rollair-2-350.png') }}" class="rollair-2" style="var(--x:2)" alt="rouleau aérien deux">
+                <img src="{{ asset('/images/rollair-3-160.png') }}" class="rollair-3" style="var(--x:3)" alt="rouleau aérien trois">
+                <img src="{{ asset('/images/rollair-4-290.png') }}" class="rollair-4" style="var(--x:4)" alt="rouleau aérien quatre">
+                <img src="{{ asset('/images/rollair-5-200.png') }}" class="rollair-5" style="var(--x:5)" alt="rouleau aérien cinq">
+                <img src="{{ asset('/images/rollair-6-200.png') }}" class="rollair-6" style="var(--x:6)" alt="rouleau aérien six">
+                <img src="{{ asset('/images/rollair-7-170.png') }}" class="rollair-7" style="var(--x:7)" alt="rouleau aérien sept">
+                <img src="{{ asset('/images/rollair-8-180.png') }}" class="rollair-8" style="var(--x:8)" alt="rouleau aérien huit">
+                <img src="{{ asset('/images/rollair-9-130.png') }}" class="rollair-9" style="var(--x:9)" alt="rouleau aérien neuf">
+                <img src="{{ asset('/images/rollair-10-90.png') }}" class="rollair-10" style="var(--x:10)" alt="rouleau aérien dix">
+                <img src="{{ asset('/images/cloud-1-1.png') }}" class="cloud-1-1" style="var(--y:1)" alt="nuage aérien un">
+                <img src="{{ asset('/images/cloud-1-2.png') }}" class="cloud-1-2" style="var(--y:2)" alt="nuage aérien deux">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row-top gutter">
+                    <div class="col-md-4">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-avocat-375.jpg') }}">
+                                <img src="{{ asset('/images/glace-avocat.jpg') }}" alt="Glace avocat">
+                            </picture>
+                            <figcaption><p>Avocat</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-mangue-375.jpg') }}">
+                                <img src="{{ asset('/images/glace-mangue.jpg') }}" alt="Glace mangue">
+                            </picture>
+                            <figcaption><p>Mangue</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-fraise-375.jpg') }}">
+                                <img src="{{ asset('/images/glace-fraise.jpg') }}" alt="Glace fraise">
+                            </picture>
+                            <figcaption><p>Fraise</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-8">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-vanille-375.jpg') }}">
+                                <img src="{{ asset('/images/event-glace-vanille.jpg') }}" alt="Glace vanille">
+                            </picture>
+                            <figcaption><p>Vanille</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-maracuja-375.jpg') }}">
+                                <img src="{{ asset('/images/glace-maracuja.jpg') }}" alt="Glace maracuja">
+                            </picture>
+                            <figcaption><p>Maracuja</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-8">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-framboise-375.jpg') }}">
+                                <img src="{{ asset('/images/event-glace-framboise.jpg') }}" alt="Glace framboise">
+                            </picture>
+                            <figcaption><p>Framboise</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-caramel-375.jpg') }}">
+                                <img src="{{ asset('/images/glace-caramel.jpg') }}" alt="Glace caramel">
+                            </picture>
+                            <figcaption><p>Caramel</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-8">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-chocolat-375.jpg') }}">
+                                <img src="{{ asset('/images/event-glace-chocolat.jpg') }}" alt="Glace chocolat">
+                            </picture>
+                            <figcaption><p>Chocolat</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-pistache-375.jpg') }}">
+                                <img src="{{ asset('/images/glace-pistache.jpg') }}" alt="Glace pistache">
+                            </picture>
+                            <figcaption><p>Pistache</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-8">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-mure-375.jpg') }}">
+                                <img src="{{ asset('/images/event-glace-mure.jpg') }}" alt="Glace mure">
+                            </picture>
+                            <figcaption><p>Mûre</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4">
+                        <figure class="card-default margin-block--25">
+                            <picture>
+                                <source media="(max-width: 854px)" srcset="{{ asset('/images/glace-oreo-375.jpg') }}">
+                                <img src="{{ asset('/images/glace-oreo.jpg') }}" alt="Glace oreo">
+                            </picture>
+                            <figcaption><p>Oreo</p></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main
+{% endblock %}

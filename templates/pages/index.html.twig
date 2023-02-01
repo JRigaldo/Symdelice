@@ -1,0 +1,240 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Iceroll-Delice Accueil{% endblock %}
+
+{% block body %}
+    <main>
+        {{ include("partials/_social-header.html.twig") }}
+        <div class="background-gradient"></div>
+        <section>
+            <div class="container splash align-items-end-medium-down align-items-end-medium-up">
+                <img src="{{ asset('/images/background-fruit-1-500.png') }}" alt="flying strawberry" class="lazyload background-image-over background-fruit-1">
+                <img src="{{ asset('/images/background-icercream-1-550.png') }}" alt="flying icecream" class="lazyload background-image-under background-icecream-1">
+                <div class="mt-20 mb-50">
+                    <img class="home-logo" src="{{ asset('/images/logo-iceRollDelice-inline.svg') }}" alt="Web site logo iceroll delice">
+                    <h1 class="txt-l big-title">Des glaces roulées faites devant vous !</br>Profitez du spectacle avant de les
+                        déguster.</h1>
+                    <div class="row-top gutter-start gutter mt-10">
+                        <div class="col-12 col-md-3">
+                            <a href="{{ path('event') }}"><button class="btn btn-primary">C'est quoi ?</button></a>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <a href="{{ path('price') }}"><button class="btn btn-primary">Devis gratuit</button></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="showcase">
+            <div class="container">
+                <div class="video">
+                    <!--video src="{{ asset('/video/iceroll-delice_gare.mp4') }}" muted loop autoplay></video-->
+                </div>
+            </div>
+        </section>
+        <section class="mt-small-50 mb-small-50 mt-100 mb-100">
+            <div class="swiper__container">
+                <div class="swiper-l">
+                    <h2 class="mb-20">Show devant</h2>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°1</span>
+                                <img src="{{ asset('/images/home-carousel-panier_02.jpg') }}" alt="Panier de fruits">
+                                <figcaption><p>Suivez nous étape par étape afin que nous vous montrions le concept. Première
+                                        étape choisissez un fruit.</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°2</span>
+                                <img src="{{ asset('/images/home-carousel-fruit.jpg') }}" alt="Mettre les fruits">
+                                <figcaption><p>Dispose les fruits sur la plaque gelée</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°3</span>
+                                <img src="{{ asset('/images/home-carousel-creme.jpg') }}" alt="Mettre la crème">
+                                <figcaption><p>On ajoute de la crème pour faire la crème glacée</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°4</span>
+                                <img src="{{ asset('/images/home-carousel-mix.jpg') }}"
+                                     alt="Mixer les fruits et la crème avec les spatules">
+                                <figcaption><p>On casse le fruit et on melange avec les spatules</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°5</span>
+                                <img src="{{ asset('/images/home-carousel-mix-2.jpg') }}" alt="Faire une pâte homogène">
+                                <figcaption><p>On en fait une pâte homogène</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°6</span>
+                                <img src="{{ asset('/images/home-carousel-aplatir-1.jpg') }}" alt="Aplatir la pate sur la plancha gelée">
+                                <figcaption><p>On applati la pâte sur la plancha à l'aide des spatules</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°7</span>
+                                <img src="{{ asset('/images/home-carousel-aplatir-2.jpg') }}" alt="Aplatir de manière uniforme">
+                                <figcaption><p>Les petits détails sont importants car il faut l'platir de manière
+                                        uniforme</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°8</span>
+                                <img src="{{ asset('/images/home-carousel-aplatir-3.jpg') }}" alt="Créer une surface carrée">
+                                <figcaption><p>Il faut répandre la masse sur toute la largeur de la plaque afin de pouvoir
+                                        faire plusieurs rouleaux</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°9</span>
+                                <img src="{{ asset('/images/home-carousel-rouler-1.jpg') }}"
+                                     alt="La racler la plancha avec les spatules">
+                                <figcaption><p>Et on commence à créer les rouleaux en raclant avec les spatules sur la
+                                        plancha</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°10</span>
+                                <img src="{{ asset('/images/home-carousel-rouler-2.jpg') }}" alt="S'appliquer à faire de beaux rouleaux">
+                                <figcaption><p>Et on répète l'opération</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°11</span>
+                                <img src="{{ asset('/images/home-carousel-rouler-3.jpg') }}"
+                                     alt="Continuer le processus jusqu'à qu'il n'y ait plus de matière sur la plancha">
+                                <figcaption><p>Chaque glace se fait différement selon sa composition mais le principe reste
+                                        le même</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <span class="text-caption caption-top-left">&Eacute;tape n°12</span>
+                                <img src="{{ asset('/images/home-carousel-finish-1.jpg') }}" alt="Présentation de la glace">
+                                <figcaption><p>Produit final</p></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="shadow-overflow"></div>
+            </div>
+        </section>
+        <section class="mt-small-100 mt-200 mb-100">
+            <div class="container">
+                <div class="row-top">
+                    <div class="col-12 col-md-12">
+                        <a href="{{ path('price') }}" class="card card-layup">
+                            <div class="card-container">
+                                <div class="imgBox">
+                                    <img src="{{ asset('/images/home-celibart.jpg') }}" alt="créer un devis devis">
+                                </div>
+                                <div class="content">
+                                    <div class="content-position">
+                                        <h2>Faites un devis</h2>
+                                        <h3>Vous voulez organiser un evenement et vous voulez savoie combien cela va vous coûter ?</h3>
+                                        <div class="button-container mt-50"><button class="btn btn-primary"><span>Il vous suffit de remplir ce formulaire</span></button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-small-50 mb-small-50 mt-100 mb-100">
+            <div class="container">
+                <h2 class="mb-20">Un show pour des fêtes</h2>
+                <div class="row-top gutter gutter-sm-n">
+                    <div class="col-md-6">
+                        <a href="{{ path('event') }}">
+                            <figure class="card-default card-theme-primary mb-small-50">
+                                <picture>
+                                    <img src="{{ asset('/images/home-iceroll-event-544.jpg') }}" alt="iceroll event">
+                                </picture>
+                                <figcaption><h4>Voir Ice roll events</h4></figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{{ path('concept') }}">
+                            <figure class="card-default card-theme-primary mb-small-50">
+                                <picture>
+                                    <img src="{{ asset('/images/home-iceroll-concept-544.jpg') }}" alt="iceroll event">
+                                </picture>
+                                <figcaption><h4>Voir Ice roll events</h4></figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-small-50 mb-small-50 mt-100 mb-100">
+            <div class="container">
+                <div class="display-thumb-container">
+                    <div class="display-thumb-content">
+                        <div class="display-thumb">
+                            <figure class="card-default">
+                                <picture>
+                                    <img src="{{ asset('/images/display-1-365.jpg') }}" alt="creme galcée 1">
+                                </picture>
+                                <figcaption><h5>Avocat</h5></figcaption>
+                            </figure>
+                            <figure class="card-default">
+                                <picture>
+                                    <img src="{{ asset('/images/display-2-365.jpg') }}" alt="creme galcée 2">
+                                </picture>
+                                <figcaption><h5>Mangue</h5></figcaption>
+                            </figure>
+                            <figure class="card-default">
+                                <picture>
+                                    <img src="{{ asset('/images/display-3-365.jpg') }}" alt="creme galcée 3">
+                                </picture>
+                                <figcaption><h5>Fraise</h5></figcaption>
+                            </figure>
+                        </div>
+                        <div class="display-thumb gutter">
+                            <figure class="card-default">
+                                <picture>
+                                    <img src="{{ asset('/images/display-4-365.jpg') }}" alt="creme galcée 4">
+                                </picture>
+                                <figcaption><h5>Pistache</h5></figcaption>
+                            </figure>
+                            <figure class="card-default">
+                                <picture>
+                                    <img src="{{ asset('/images/display-5-365.jpg') }}" alt="creme galcée 5">
+                                </picture>
+                                <figcaption><h5>Maracuja</h5></figcaption>
+                            </figure>
+                            <figure class="card-default">
+                                <picture>
+                                    <img src="{{ asset('/images/display-6-365.jpg') }}" alt="creme galcée 6">
+                                </picture>
+                                <figcaption><h5>Oero</h5></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <a href="{{ path('menu') }}" class="btn-flex absolute-bottom-center">
+                        <button class="btn btn-primary">Les glaces</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

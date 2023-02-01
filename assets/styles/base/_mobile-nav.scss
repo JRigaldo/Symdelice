@@ -1,0 +1,112 @@
+$responsive-menu-width: 300px;
+
+/** ------- MOBILE NAV WHEN CLICKED ------- **/
+body.with-sidebar-links .mobile-menu-links {
+  @include transform(translateX($responsive-menu-width * -1));
+}
+
+/** ------- SITE COVER WHEN CLICKED ------- **/
+body.with-sidebar-links {
+  overflow-y: hidden;
+
+  .site-cover {
+    background-color: var(--white);
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+  }
+}
+
+/** ------- OUSIDE MOBILE NAV ------- **/
+aside.mobile-menu.mobile-menu--right {
+  right: calc(-1 * #{$responsive-menu-width});
+}
+
+aside.mobile-menu {
+  position: fixed;
+  width: $responsive-menu-width;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: var(--white);
+  transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+  z-index: 100;
+  overflow-y: scroll;
+}
+
+.mobile-menu--container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/** ------- LINK LAYOUT ------- **/
+.exit-menu {
+  display: block;
+  float: right;
+  width: calc(var(--header-top) / 2);
+  height: calc(var(--header-top) / 2);
+  position: relative;
+  margin-top: calc(var(--header-top) / 4);
+  margin-right: calc(var(--header-top) / 4);
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+    width: calc(var(--header-top) / 2);
+    height: calc(var(--header-top) / 2);
+    fill: var(--black);
+  }
+}
+
+nav.mobile-menu--text {
+  padding-top: calc(var(--header-top) * 2);
+
+  ul {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+
+    li {
+      display: block;
+      margin: 0.3rem 0;
+      padding: 0 20px;
+
+      a {
+        width: 100%;
+        padding: 0.5rem 0.7rem;
+        display: inline-block;
+        transition-duration: 300ms;
+        -webkit-transition-duration: 300ms;
+        text-align: center;
+        color: var(--black);
+        background-color: var(--gray-200);
+        border-radius: 5px;
+        &:hover {
+          background-color: var(--theme-primary);
+          color: var(--white);
+        }
+        &.active{
+          background-color: var(--gray);
+          color: var(--white);
+        }
+      }
+      &:last-child a{
+        background-color: initial;
+      }
+    }
+  }
+}

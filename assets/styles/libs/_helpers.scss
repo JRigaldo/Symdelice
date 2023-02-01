@@ -1,0 +1,253 @@
+%shadow {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+%shadow-hover {
+  -webkit-box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4);
+}
+
+%border-radius {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+%-text--primary {
+  color: var(--primary);
+}
+
+%-text--secondary {
+  color: var(--secondary);
+}
+
+%-text--danger {
+  color: var(--danger);
+}
+
+%-text--success {
+  color: var(--success);
+}
+
+.text-brand {
+  @extend %-text--secondary;
+  font-weight: var(--body-black);
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.gutter.gutter-start{
+  justify-content: flex-start;
+}
+
+.gutter.gutter-start > [class^="col-"],
+.gutter.gutter-start > [class^=" col-"]{
+  &:first-child{
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+@include medium-up {
+  .hidden-up {
+    display: none !important;
+  }
+  div.align-items-center-medium-up{
+    align-items: center;
+  }
+  div.align-items-end-medium-up{
+    align-items: flex-end;
+  }
+}
+
+@include medium-down {
+  .hidden-down {
+    display: none !important;
+  }
+  div.align-items-center-medium-down{
+    align-items: center;
+  }
+  div.align-items-end-medium-down{
+    align-items: flex-end;
+  }
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.margin-block--25{
+  margin: 25px 0;
+}
+
+.shadow-top {
+  -webkit-box-shadow: 0px -3px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px -3px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+$times: 49;
+$times-50: 6;
+
+@include medium-up {
+  @for $i from 1 through $times {
+    .p-#{$i}{
+      padding: #{$i * 1}px;
+    }
+    .pt-#{$i}{
+      padding-top: #{$i}px;
+    }
+    .pb-#{$i}{
+      padding-bottom: #{$i}px;
+    }
+    .pl-#{$i}{
+      padding-left: #{$i}px;
+    }
+    .pr-#{$i}{
+      padding-right: #{$i}px;
+    }
+    .m-#{$i}{
+      margin: #{$i}px;
+    }
+    .mt-#{$i}{
+      margin-top: #{$i}px;
+    }
+    .mb-#{$i}{
+      margin-bottom: #{$i}px;
+    }
+    .ml-#{$i}{
+      margin-left: #{$i}px;
+    }
+    .mr-#{$i}{
+      margin-right: #{$i}px;
+    }
+  }
+
+  @for $i from 1 through $times-50 {
+    .p-#{$i * 50} {
+      padding: #{$i * 50}px;
+    }
+    .pt-#{$i * 50} {
+      padding-top: #{$i * 50}px;
+    }
+    .pb-#{$i * 50} {
+      padding-bottom: #{$i * 50}px;
+    }
+    .pl-#{$i * 50} {
+      padding-left: #{$i * 50}px;
+    }
+    .pr-#{$i * 50} {
+      padding-right: #{$i * 50}px;
+    }
+    .m-#{$i * 50} {
+      margin: #{$i * 50}px;
+    }
+    .mt-#{$i * 50} {
+      margin-top: #{$i * 50}px;
+    }
+    .mb-#{$i * 50} {
+      margin-bottom: #{$i * 50}px;
+    }
+    .ml-#{$i * 50} {
+      margin-left: #{$i * 50}px;
+    }
+    .mr-#{$i * 50} {
+      margin-right: #{$i * 50}px;
+    }
+  }
+}
+
+@include medium-down{
+  @for $i from 1 through $times {
+    .p-small-#{$i}{
+      padding: #{$i}px;
+    }
+    .pt-small-#{$i}{
+      padding-top: #{$i}px;
+    }
+    .pb-small-#{$i}{
+      padding-bottom: #{$i}px;
+    }
+    .pl-small-#{$i}{
+      padding-left: #{$i}px;
+    }
+    .pr-small-#{$i}{
+      padding-right: #{$i}px;
+    }
+    .m-small-#{$i}{
+      margin: #{$i}px;
+    }
+    .mt-small-#{$i}{
+      margin-top: #{$i}px;
+    }
+    .mb-small-#{$i}{
+      margin-bottom: #{$i}px;
+    }
+    .ml-small-#{$i}{
+      margin-left: #{$i * 50}px;
+    }
+    .mr-small-#{$i}{
+      margin-right: #{$i * 50}px;
+    }
+  }
+  @for $i from 1 through $times-50 {
+    .p-small-#{$i * 50}{
+      padding: #{$i * 50}px;
+    }
+    .pt-small-#{$i * 50}{
+      padding-top: #{$i * 50}px;
+    }
+    .pb-small-#{$i * 50}{
+      padding-bottom: #{$i * 50}px;
+    }
+    .pl-small-#{$i * 50}{
+      padding-left: #{$i * 50}px;
+    }
+    .pr-small-#{$i * 50}{
+      padding-right: #{$i * 50}px;
+    }
+    .m-small-#{$i * 50}{
+      margin: #{$i * 50}px;
+    }
+    .mt-small-#{$i * 50}{
+      margin-top: #{$i * 50}px;
+    }
+    .mb-small-#{$i * 50}{
+      margin-bottom: #{$i * 50}px;
+    }
+    .ml-small-#{$i * 50}{
+      margin-left: #{$i * 50}px;
+    }
+    .mr-small-#{$i * 50}{
+      margin-right: #{$i * 50}px;
+    }
+  }
+}
+
+.txt-l{
+  text-align: left;
+}
+
+txt-c{
+  text-align: center;
+}
+
+.txt-c{
+  text-align: center;
+}
+
+.txt-dark{
+  color: var(--black);
+}
+
+.txt-white{
+  color: var(--white);
+}

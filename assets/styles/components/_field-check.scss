@@ -1,0 +1,58 @@
+input[type="checkbox"].field-check{
+  position: relative;
+  width: 60px;
+  height: 30px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--gray-200);
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+input:checked[type="checkbox"].field-check{
+  background-color: var(--primary);
+}
+
+input[type="checkbox"].field-check:before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  transform: scale(1.1);
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.field-check-label{
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  left: 5px;
+  font-size: 1.05rem;
+}
+
+input:checked[type="checkbox"].field-check:before{
+  left: 30px;
+}
+
+input[type="checkbox"].field-check + label span.field-check-yes{
+  display: none;
+}
+
+input[type="checkbox"].field-check + label span.field-check-no{
+  display: block;
+}
+
+input:checked[type="checkbox"].field-check + label span.field-check-no{
+  display: none;
+}
+
+input:checked[type="checkbox"].field-check + label span.field-check-yes{
+  display: block;
+}

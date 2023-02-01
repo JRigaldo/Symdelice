@@ -1,0 +1,27 @@
+footer nav.social--row-icon{
+  padding: 0;
+}
+
+.footer__nav--links ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  li{
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    a{
+      color: var(--white);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: var(--body-regular);
+      letter-spacing: 2px;
+      padding: 0.5rem;
+      transition-duration: 0.3s;
+      &:hover{
+        color: var(--theme-primary);
+      }
+    }
+  }
+}
+

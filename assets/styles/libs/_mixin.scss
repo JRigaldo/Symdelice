@@ -1,0 +1,155 @@
+$medium-responsive: 854px !default;
+$custom-responsive: 555px !default;
+
+@mixin medium-up {
+  @media only screen and (min-width: #{$medium-responsive}) {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @media only screen and (max-width: #{$medium-responsive}) {
+    @content;
+  }
+}
+
+@mixin custom-responsive-up($custom-responsive: "") {
+  @media only screen and (min-width: #{$custom-responsive}) {
+    @content;
+  }
+}
+
+@mixin custom-responsive-down($custom-responsive: "") {
+  @media only screen and (max-width: #{$custom-responsive}) {
+    @content;
+  }
+}
+
+@mixin custom-responsice-middle($custom-responsive-max: "", $custom-responsive-min: "") {
+  @media only screen and (max-width: #{$custom-responsive-max}) and (min-width: #{$custom-responsive-min}) {
+    @content;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-center {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+}
+
+@mixin flex-top {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -moz-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+}
+
+@mixin align-center {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@mixin transform($transform) {
+  -ms-transform: $transform;
+  -webkit-transform: $transform;
+  -o-transform: $transform;
+  -moz-transform: $transform;
+  transform: $transform;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    zoom: 1;
+    clear: both;
+  }
+}
+
+@mixin icon($width-a: 30px, $height-a: 30px, $width-icon: 20px, $height-icon: 20px, $color-icon: var(--white), $color-hover: var(--theme-primary)) {
+  position: relative;
+  display: block;
+  width: $width-a;
+  height: $height-a;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: $color-icon;
+    transition-duration: 300ms;
+     -webkit-transition-duration: 300ms;
+    path{
+      transition-duration: 300ms;
+      -webkit-transition-duration: 300ms;
+      fill: $color-icon;
+    }
+    
+  }
+
+  &:hover {
+    svg {
+      fill: $color-hover;
+      path{
+        fill: $color-hover;
+      }
+    }
+  }
+}
+
+@mixin shadow {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin shadow-light{
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+}
+
+@mixin text-gradient(){
+  background: #FFFFFF;
+  background: linear-gradient(to right, #FFFFFF 0%, #B6E4F7 21%, #009FE3 73%, #FFED00 85%, #E83B4D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

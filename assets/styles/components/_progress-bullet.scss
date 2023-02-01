@@ -1,0 +1,142 @@
+.progress-bullet{
+  display: flex;
+  width: 100%;
+  //max-width: 400px;
+  margin: 30px auto;
+  padding: 1rem;
+}
+
+.progress-bullet .bullet-1.bullet-active,
+.progress-bullet .bullet-2.bullet-active,
+.progress-bullet .bullet-3.bullet-active{
+  .bullet-point:after{
+    display: block;
+    z-index: 0;
+  }
+  .bullet-point span{
+    color: var(--white);
+  }
+}
+
+.progress-bullet .bullet.bullet-done{
+  .bullet-point:after{
+    display: block;
+  }
+  .bullet-point span{
+    display: none;
+  }
+  svg.check{
+    display: block;
+  }
+  &:after{
+    display: block;
+  }
+}
+
+.progress-bullet .bullet{
+  .bullet-point:after{
+    display: none;
+  }
+  svg.check{
+    display: none;
+  }
+  &:after{
+    display: none;
+  }
+}
+
+.progress-bullet .bullet{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  p.bullet-title{
+    font-size: 0.85rem;
+    font-weight: var(--body-bold);
+    color: var(--gray-500);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-230%);
+  }
+  .bullet-text{
+
+  }
+  .bullet-point{
+    z-index: 1;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    span{
+      @include absolute-center;
+      font-size: 1rem;
+      z-index: 3;
+    }
+    &:after{
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      content: '';
+      background-color: var(--success);
+      width: 36px;
+      height: 36px;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+    }
+    &:before{
+      z-index: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      content: '';
+      background-color: var(--white);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid var(--black);
+    }
+  }
+  svg.check{
+    z-index: 3;
+    width: 20px;
+    height: auto;
+    @include absolute-center;
+    path{
+      fill: var(--white);
+    }
+  }
+  &:before,
+  &:after{
+    position: absolute;
+    content: '';
+    width: calc(100% - 36px);
+    height: 3px;
+    background-color: var(--black);
+    top: 50%;
+    left: 50%;
+    transform: translateX(18px) translateY(-50%);
+  }
+  &:after{
+    background-color: var(--success);
+    transform: translateX(18px) translateY(-50%) scaleX(0);
+    animation: progress-line 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+  &:last-child:before,
+  &:last-child:after{
+    display: none;
+  }
+}
+
+@keyframes progress-line {
+  100%{
+    transform: translateX(18px) translateY(-50%) scaleX(1);
+  }
+}

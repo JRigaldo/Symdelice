@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Iceroll-Delice Accueil{% endblock %}
+
+{% block body %}
+
+<main>
+    {{ include("partials/_social-header.html.twig") }}
+    <div class="background-gradient-2"></div>
+    <section class="pt-50 pt-small-50">
+        <div class="container">
+            <form class="form-container mb-100 mt-small-50">
+                <div class="form-box">
+                    <div class="form-box__left"></div>
+                    <div class="form-box__right">
+                        <div class="row-top gutter">
+                            <div class="col-md-12">
+                                <h2 class="pt-30 pb-10">Nous sommes à votre diposition</h2>
+                                <h3 class="mt-20 mb-20">Formulaire de contact</h3>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="field-radio">
+                                    <input id="female" value="female" name="gender" type="radio" class="field-radio">
+                                    <label for="female" class="field-label-radio">Femme</label>
+                                </div>
+                                <div class="field-radio">
+                                    <input id="male" value="male" name="gender" type="radio" class="field-radio">
+                                    <label for="male" class="field-label-radio">Homme</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="firstname" class="field-label">Prénom</label>
+                                    <input id="firstname" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="lastname" class="field-label">Nom</label>
+                                    <input id="lastname" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="email" class="field-label">Email</label>
+                                    <input id="email" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="phone" class="field-label">Mobile</label>
+                                    <input id="phone" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="event" class="field-label">Type d'événement</label>
+                                    <input id="event" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="guest" class="field-label">Nombre de convives</label>
+                                    <input id="guest" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="field">
+                                    <label for="subject" class="field-label">Sujet du mail</label>
+                                    <input id="subject" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="textarea field-message">
+                                    <label for="textarea" class="field-label-message">Message</label>
+                                    <textarea id="textarea" type="textarea" class="field-textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="center-center mb-20">
+                                <button class="btn btn-success">Envoyez le mail</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

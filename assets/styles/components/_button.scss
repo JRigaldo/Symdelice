@@ -1,0 +1,158 @@
+.btn {
+  display: block;
+  letter-spacing: 1px;
+  transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+  width: 100%;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  margin: 10px auto;
+  font-weight: var(--body-bold);
+}
+
+.btn-primary {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  border: 1px solid var(--white);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: var(--custom-font);
+  min-width: 200px;
+  padding: 1.5rem;
+  &:hover {
+    background-color: var(--white);
+    color: var(--theme-primary);
+    border: 1px solid var(--theme-primary);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  border: 1px solid var(--theme-primary);
+  color: var(--theme-primary);
+  text-transform: uppercase;
+  font-family: var(--custom-font);
+  min-width: 200px;
+  cursor: pointer;
+  padding: 1.5rem;
+  &:hover {
+    background-color: var(--theme-primary);
+    border: 1px solid var(--theme-primary);
+    color: var(--white);
+  }
+}
+
+.btn-success {
+  background-color: var(--white);
+  border: 1px solid var(--success);
+  color: var(--success);
+  text-transform: uppercase;
+  font-family: var(--custom-font);
+  min-width: 200px;
+  cursor: pointer;
+  padding: 1.5rem;
+  &:hover {
+    background-color: var(--success);
+    border: 1px solid var(--success);
+    color: var(--white);
+  }
+}
+
+.btn-danger {
+  background-color: var(--white);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  text-transform: uppercase;
+  font-family: var(--custom-font);
+  min-width: 200px;
+  cursor: pointer;
+  padding: 1.5rem;
+  &:hover {
+    background-color: var(--danger);
+    border: 1px solid var(--danger);
+    color: var(--white);
+  }
+}
+
+.btn-accent {
+  background-color: var(--white);
+  color: var(--theme-primary);
+  border-radius: 50px;
+  border: 1px solid var(--theme-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  &:hover {
+    background-color: var(--theme-primary);
+    color: var(--white);
+  }
+}
+
+.btn-max-w{
+  max-width: 200px;
+}
+
+.btn-txt-center{
+  text-align: center;
+}
+
+.btn-flex{
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+.center-center {
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+}
+
+.absolute-bottom-center{
+  z-index: 10;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-cross {
+  cursor: pointer;
+  float: right;
+  @include icon;
+}
+
+.chevron-down{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  svg{
+    margin: 5px;
+    width: 20px;
+  }
+}
+
+.chevron-down{
+  svg{
+    animation: chevronDown ease-out 3s infinite;
+  }
+}
+
+@keyframes chevronDown {
+  0%{
+    fill: var(--black);
+  }
+  100%{
+    fill: var(--theme-primary);
+  }
+}
+

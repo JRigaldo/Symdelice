@@ -1,0 +1,141 @@
+/** ------- GRID ------- **/
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: calc(100% - 1rem);
+  max-width: 70rem;
+  height: 100%;
+}
+
+.row-center {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  width: 100%;
+  height: 100%;
+  > * {
+    position: relative;
+  }
+}
+
+.row-top {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  > * {
+    position: relative;
+  }
+}
+
+.row-stretch {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  > * {
+    position: relative;
+  }
+}
+
+.gutter-columns > [class^="col-"],
+.gutter-columns  > [class^=" col-"]{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.gutter > [class^="col-"],
+.gutter > [class^=" col-"] {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@include medium-down{
+  .gutter-sm-n > [class^="col-"],
+  .gutter-sm-n > [class^=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  div.gutter-columns > [class^="col-"],
+  div.gutter-columns  > [class^=" col-"]{
+    margin-top: 2rem;
+    margin-bottom:2rem;
+  }
+}
+
+
+@mixin grid-template($col: "", $limit: "") {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(#{$col}, #{$limit}));
+  grid-gap: 1rem;
+  row-gap: 2.5em;
+}
+
+$columns: 12;
+
+@for $i from 1 through $columns {
+  @include custom-responsive-down(1080px) {
+    .col-sm-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+      & > * {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .offset-sm-#{$i} {
+      margin-left: 100% / $columns * $i;
+    }
+  }
+  @include medium-down {
+    .col-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+      /*
+      & > * {
+        padding: 0;
+        margin: 0;
+      }
+      */
+    }
+    .col-offset-#{$i} {
+      margin-left: 100% / $columns * $i;
+    }
+  }
+  @include medium-up {
+    .col-md-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+    }
+    .offset-md-#{$i} {
+      margin-left: 100% / $columns * $i;
+    }
+  }
+  @include custom-responsive-up(1920px) {
+    div.col-lg-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+    }
+    div.offset-lg-#{$i} {
+      margin-left: 100% / $columns * $i;
+    }
+  }
+}

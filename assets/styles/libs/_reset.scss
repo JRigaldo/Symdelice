@@ -1,0 +1,119 @@
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+input:focus {
+  outline: none ! important;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  height: auto;
+  width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html,
+body {
+  position: relative;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main{
+  height: 100%;
+  width: 100%;
+}
+
+picture {
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+
+button:focus {
+  outline: 0;
+}

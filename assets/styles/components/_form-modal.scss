@@ -1,0 +1,35 @@
+.form-modal{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.form-modal--container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.container-modal{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.container-modal.animated-disable{
+  display: none;
+}
+
+.container-modal.animated.animated-active{
+  position: relative;
+}
+
+.animated-active{
+  display: block;
+}

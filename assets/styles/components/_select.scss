@@ -1,0 +1,194 @@
+
+/** ------- SELECT OPTIONS ------- **/
+
+.form-mobile {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+}
+
+.select-box {
+  position: relative;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  width: 80px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  position: absolute;
+  z-index: 10;
+  top: 55px;
+  left: 0;
+  background: var(--gray-light);
+  color: var(--secondary);
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  //   transition: all 0.4s;
+  //   border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: var(--white);
+  //   border-radius: 8px;
+  border-bottom: 1px solid var(--theme-primary);
+  margin-bottom: 8px;
+  color: var(--secondary);
+  position: relative;
+  text-align: left;
+  font-size: 1.1rem;
+  order: 0;
+  display: table;
+  height: 50px;
+}
+
+.selected.field-inline {
+  margin: 0;
+}
+
+.selected span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: var(--gray);
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.selected svg.triangle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  min-width: 20px;
+}
+
+.select-box .options-container.active + .selected svg {
+  transform: rotateX(180deg);
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 5px;
+  background: var(--gray-light);
+  //   border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  //   border-radius: 0 8px 8px 0;
+}
+
+.select-box .option {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: var(--gray);
+}
+
+.select-box label {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  opacity: 0;
+}
+
+/** ------- SELECT FLAG ------- **/
+
+.select-box-icons {
+  position: relative;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  width: 30px;
+  height: 100%;
+  flex-direction: column;
+  margin-right: 5px;
+  margin-left: 15px;
+  svg {
+    width: 30px;
+  }
+}
+
+.select-box-icons .options-container-icons {
+  position: absolute;
+  z-index: 10;
+  top: 55px;
+  left: 0;
+  color: var(--secondary);
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  //   transition: all 0.4s;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected-icon {
+  position: relative;
+  order: 0;
+  display: table;
+  height: 100%;
+  span {
+    display: table-cell;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    .option-flag-icon {
+      width: 30px;
+    }
+  }
+}
+
+.select-box-icons .options-container-icons.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.selected-icon svg.triangle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.select-box-icons .options-container-icons.active + .selected svg {
+  transform: rotateX(180deg);
+}
+
+.select-box-icons .option-icon {
+  margin: 15px 0;
+  cursor: pointer;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:nth-child(3) {
+    margin-bottom: 0;
+  }
+}
+
+.select-box-icons .option-icon .radio {
+  opacity: 0;
+}

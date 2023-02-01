@@ -1,0 +1,120 @@
+@include medium-down{
+  h1.home-big-title{
+    text-align: center;
+  }
+  h1, h2{
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  h1.banner-title{
+    font-size: 1.3rem;
+  }
+
+  div.gallery__text h3{
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+
+  figcation.text-caption{
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+
+  figcaption.caption-top-left,
+  span.caption-top-left{
+    top: 5px;
+    left: 5px;
+  }
+
+  /**
+  Card layup
+   */
+  a.card-layup {
+    width: 100%;
+    background: rgb(232,59,78);
+    background: linear-gradient(153deg, rgba(232,59,78,1) 51%, rgba(0,0,0,1) 100%);
+    .card-container{
+      flex-direction: column;
+      .content{
+        width: 100%;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+        text-align: center;
+        h2{
+          margin-top: 2rem;
+        }
+        h3{
+          font-size: 1rem;
+          line-height: 1.6rem;
+        }
+      }
+      .imgBox{
+        transform: translateY(0);
+        width: 100%;
+        &:before{
+          display: none;
+        }
+        img{
+          border-radius: 10px 10px 0 0;
+          box-shadow: none;
+          -webkit-box-shadow: none;
+        }
+      }
+    }
+  }
+  /**
+  Swiper
+   */
+  figure.card-default {
+    border-radius: 5px;
+    figcaption h4 {
+      padding: 0.2rem;
+      font-size: 1rem;
+    }
+    figcaption > * {
+      font-size: 0.7rem;
+      padding: 0.2rem;
+      line-height: 1.3rem;
+    }
+  }
+  /**
+  Display-thumb
+   */
+  .display-thumb-container{
+    height: 60vh;
+    &:before,
+    &:after{
+      height: 100px;
+    }
+  }
+  .display-thumb .card-default{
+    margin: 3px 0;
+    &:nth-child(1){
+      transform: translateY(50px);
+    }
+    &:nth-child(2){
+      transform: translateY(-50px);
+    }
+    &:nth-child(3){
+      transform: translateY(0);
+    }
+  }
+  .display-thumb{
+    gap: 3px;
+    .card-default figcaption{
+      min-height: 30px;
+      h5{
+        font-size: 0.8rem;
+      }
+    }
+  }
+  /*
+Footer
+ */
+  footer nav.footer__nav--links ul{
+    flex-direction: column;
+  }
+}
+
+
+

@@ -1,0 +1,53 @@
+body {
+  font-family: var(--theme-font-family);
+  background-color: var(--black);
+  font-size: var(--font-size-body);
+  color: var(--black);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: var(--semi-bold);
+  letter-spacing: 1px;
+  line-height: 3.7rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: var(--body-bold);
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: var(--body-bold);
+  letter-spacing: 1px;
+  line-height: 3rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: var(--body-bold);
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+
+p,
+li {
+  color: var(--gray);
+  line-height: 1.6rem;
+}
+
+header{
+  width: 100%;
+  background-color: var(--white);
+}
+
+header{
+  z-index: 100;
+}
+
+main{
+  margin-top: var(--header-top);
+}
