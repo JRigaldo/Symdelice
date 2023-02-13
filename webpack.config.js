@@ -33,6 +33,7 @@ Encore
         './assets/js/form.js',
         './assets/js/menu.js',
         './assets/js/animation.js',
+        './assets/js/field-check.js'
     ])
 
     // Add CSS site stylesheets

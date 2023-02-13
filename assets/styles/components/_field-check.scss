@@ -56,3 +56,19 @@ input:checked[type="checkbox"].field-check + label span.field-check-no{
 input:checked[type="checkbox"].field-check + label span.field-check-yes{
   display: block;
 }
+
+.field-info.field-info-no.field-info-active{
+  display: block;
+}
+
+.field-info.field-info-no{
+  display: none;
+}
+
+.field-info.field-info-yes{
+  display: none;
+}
+
+.field-info.field-info-yes.field-info-active{
+  display: block;
+}
