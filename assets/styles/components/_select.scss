@@ -1,194 +1,98 @@
-
-/** ------- SELECT OPTIONS ------- **/
-
-.form-mobile {
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  flex-direction: row;
-}
-
-.select-box {
+.field-select{
   position: relative;
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  width: 80px;
-  flex-direction: column;
-}
 
-.select-box .options-container {
-  position: absolute;
-  z-index: 10;
-  top: 55px;
-  left: 0;
-  background: var(--gray-light);
-  color: var(--secondary);
-  max-height: 0;
+  line-height: 16px;
   width: 100%;
+  height: 45px;
+  font-size: 0.9rem;
+
+  margin: 15px 0 10px 0;
+  background-color: var(--gray-light);
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+
+  &:after{
+    position: absolute;
+    content: '\25BC';
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+  }
+}
+
+.field-select.select-active:after{
+  transform: rotateX(180deg) translateY(calc(-50% + 16px));
+}
+
+.select-options{
+  position: absolute;
+  z-index: 100;
+  top: 47px;
+  left: 0;
+  max-height: 0;
   opacity: 0;
-  //   transition: all 0.4s;
-  //   border-radius: 8px;
+
+  width: 100%;
+  transition: .3s all ease;
   overflow: hidden;
+  background-color: var(--gray-200);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
 
-  order: 1;
+  @include shadow;
 }
 
-.selected {
-  background: var(--white);
-  //   border-radius: 8px;
-  border-bottom: 1px solid var(--theme-primary);
-  margin-bottom: 8px;
-  color: var(--secondary);
+.field-select .option{
   position: relative;
-  text-align: left;
-  font-size: 1.1rem;
-  order: 0;
-  display: table;
-  height: 50px;
 }
 
-.selected.field-inline {
-  margin: 0;
+.field-select .option,
+.field-select .selected{
+  padding: 8px 10px;
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
 }
 
-.selected span {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  color: var(--gray);
+.field-select .option.option-focused{
+  background-color: var(--gray-300);
 }
 
-.select-box .options-container.active {
+.field-select span {
+  position: relative;
+  top: 5px ;
+}
+
+.select-options label{
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.field-select .option:hover{
+  background-color: var(--gray-400);
+}
+
+.field-select .option .radio{
+  display: none;
+}
+
+.field-select.select-active .select-options{
   max-height: 240px;
   opacity: 1;
   overflow-y: scroll;
 }
 
-.selected svg.triangle {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  min-width: 20px;
+.select-options::-webkit-scrollbar{
+  width: 8px;
+  background-color: var(--gray-300);
+  border-radius: 0 5px 5px 0;
 }
 
-.select-box .options-container.active + .selected svg {
-  transform: rotateX(180deg);
-}
-
-.select-box .options-container::-webkit-scrollbar {
-  width: 5px;
-  background: var(--gray-light);
-  //   border-radius: 0 8px 8px 0;
-}
-
-.select-box .options-container::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  //   border-radius: 0 8px 8px 0;
-}
-
-.select-box .option {
-  padding: 12px 24px;
-  cursor: pointer;
-}
-
-.select-box .option:hover {
-  background: var(--gray);
-}
-
-.select-box label {
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.select-box .option .radio {
-  opacity: 0;
-}
-
-/** ------- SELECT FLAG ------- **/
-
-.select-box-icons {
-  position: relative;
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  width: 30px;
-  height: 100%;
-  flex-direction: column;
-  margin-right: 5px;
-  margin-left: 15px;
-  svg {
-    width: 30px;
-  }
-}
-
-.select-box-icons .options-container-icons {
-  position: absolute;
-  z-index: 10;
-  top: 55px;
-  left: 0;
-  color: var(--secondary);
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  //   transition: all 0.4s;
-  overflow: hidden;
-
-  order: 1;
-}
-
-.selected-icon {
-  position: relative;
-  order: 0;
-  display: table;
-  height: 100%;
-  span {
-    display: table-cell;
-    height: 30px;
-    width: 30px;
-    vertical-align: middle;
-    .option-flag-icon {
-      width: 30px;
-    }
-  }
-}
-
-.select-box-icons .options-container-icons.active {
-  max-height: 240px;
-  opacity: 1;
-  overflow-y: scroll;
-}
-
-.selected-icon svg.triangle {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.select-box-icons .options-container-icons.active + .selected svg {
-  transform: rotateX(180deg);
-}
-
-.select-box-icons .option-icon {
-  margin: 15px 0;
-  cursor: pointer;
-  &:first-child {
-    margin-top: 0;
-  }
-  &:nth-child(3) {
-    margin-bottom: 0;
-  }
-}
-
-.select-box-icons .option-icon .radio {
-  opacity: 0;
+.select-options::-webkit-scrollbar-thumb{
+  background-color: var(--gray-500);
+  border-radius: 0 5px 5px 0;
 }
