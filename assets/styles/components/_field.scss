@@ -5,9 +5,19 @@
   margin: 15px 0 10px 0;
 }
 
-.field-helper {
+.field-helper,
+.field-error {
+  display: block;
   padding-left: 10px;
   font-size: 0.8rem;
+}
+
+.field-error {
+  color: var(--danger);
+}
+
+.field-helper {
+  color: var(--gray-300);
 }
 
 .field:after,
