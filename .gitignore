@@ -34,3 +34,5 @@ package.json
 yarn.lock
 symfony.lock
 composer.lock
+
+/migrations/
