@@ -1,6 +1,94 @@
+<!--
 <div class="field">
     <label for="code" class="field-label">Code</label>
     <input id="code" type="text" class="field-input">
     <span class="field-error">Une erreur s'est produite</span>
     <span class="field-helper">Mettez votre code promo (chiffres)</span>
 </div>
+-->
+
+{% block field_text_row %}
+    {% apply spaceless %}
+        <div class="field">
+            {{ form_label(form) }}
+            {{ form_widget(form) }}
+            <span class="field-error">{{ form_errors(form) }}</span>
+            <span class="field-helper">{{ form_help(form) }}</span>
+        </div>
+    {% endapply %}
+{% endblock %}
+
+
+{% block field_text_label %}
+    {% apply spaceless %}
+        <label for="{{ id }}" class="field-label">
+            {{ label|raw }}
+        </label>
+    {% endapply %}
+{% endblock %}
+
+{% block field_text_widget %}
+    {% apply spaceless %}
+        <input class="field-input {{ form.vars.full_name }}" id="{{ id }}" name="{{ form.vars.full_name }}" type="text" value="{{ value }}" placeholder="" {% if required is defined and required == true %} required {% endif %} {% if attr['pattern'] is defined %}pattern="{{ attr['pattern'] }}"{% endif %} {% if attr['maxlength'] is defined %}maxlength="{{attr['maxlength']}}"{%endif%}/>
+    {% endapply %}
+{% endblock %}
+
+<!--
+<div class="field-checkbox">
+    <input type="checkbox" id="strawberry" name="strawberry">
+    <label for="strawberry">
+        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+            </g>
+        </svg>
+        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+        </svg>
+        <span class="img-hover"></span>
+        <span class="txt-label">Fraise</span>
+    </label>
+    <picture><img src="{{ asset('/images/carte-fraise.jpg') }}" alt="parfum fraise"></picture>
+</div>
+
+<div class="field-check">
+    <input type="checkbox" name="tastingMode" class="field-check tastingMode" value="tastingMode" id="tastingMode">
+    <label for="tasting" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
+    <span class="field-error">Vous devez renseigner ce champ</span>
+</div>
+
+<fieldset class="field-select">
+    <div class="selected"><span>Choisir un canton</span></div>
+    <div class="select-options">
+        <div class="option">
+            <input type="radio" class="radio" id="vaud" name="vaud">
+            <label for="vaud">Vaud</label>
+        </div>
+        <div class="option">
+            <input type="radio" class="radio" id="geneve" name="geneve">
+            <label for="geneve">Genève</label>
+        </div>
+        <div class="option">
+            <input type="radio" class="radio" id="neuchatel" name="neuchatel">
+            <label for="neuchatel">Neuchâtel</label>
+        </div>
+        <div class="option">
+            <input type="radio" class="radio" id="valais" name="valais">
+            <label for="valais">Valais</label>
+        </div>
+        <div class="option">
+            <input type="radio" class="radio" id="fribourg" name="fribourg">
+            <label for="fribourg">Fribourg</label>
+        </div>
+        <div class="option">
+            <input type="radio" class="radio" id="berne" name="berne">
+            <label for="berne">Berne</label>
+        </div>
+        <div class="option">
+            <input type="radio" class="radio" id="jura" name="jura">
+            <label for="jura">Jura</label>
+        </div>
+    </div>
+</fieldset>
+-->

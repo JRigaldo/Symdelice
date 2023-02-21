@@ -2,10 +2,16 @@
 
 namespace App\Controller;
 
+use App\Repository\FlavorRepository;
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
+/**
+ * @ORM\Embeddable
+ */
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home')]
@@ -29,11 +35,13 @@ class HomeController extends AbstractController
         return $this->render('pages/event.html.twig');
     }
 
-    #[Route('/prix', name: 'price')]
-    public function price(): Response
+    #[Route('/prix', name: 'price', methods: ['GET'])]
+    public function price(FlavorRepository $repository): Response
     {
-
-        return $this->render('pages/price.html.twig');
+        $flavors = $repository->findAll();
+        return $this->render('pages/price.html.twig', [
+            'flavors' => $flavors
+        ]);
     }
 
     #[Route('/concept', name: 'concept')]

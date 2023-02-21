@@ -3,223 +3,223 @@
 {% block title %}Iceroll-Delice Event{% endblock %}
 
 {% block body %}
-
-<main>
-    {{ include("partials/_social-header.html.twig") }}
-    <section>
-        <picture class="banner">
-            <source media="(max-width:768px)" srcset="{{ asset('/images/dany-eldora-2-768.jpg') }} 768w">
-            <source media="(min-width:769px) and (max-width:1000px)" srcset="{{ asset('/images/dany-eldora-2-1000.jpg') }} 1000w">
-            <source media="(min-width:1001px)" srcset="{{ asset('/images/dany-eldora-2.jpg') }} 1920w">
-            <img src="{{ asset('/images/dany-eldora-2.jpg') }}" alt="Dany Eldora geneve">
-        </picture>
-        <div class="container splash splash-over-image align-items-center align-items-end-medium-up align-items-end-medium-down">
-            <div class="mt-20 mb-100 mb-small-100">
-                <h1 class="txt-c txt-white banner-title">GLACES ROULÉE, UNE CUISINE MINUTE SAVOUREUSE ET SPÉCTACULAIRE FAITE PAR DES ARTISANS PASSIONNÉS</h1>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row-stretch gutter gutter-columns">
-                <div class="col-12 col-md-6">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/celibart-570.jpg') }}" alt="Evenement celib'art">
-                            <figcaption class="text-caption caption-top-right">Célib’Art</figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <h3>Vos invités seront ébahi avec un concept original de glaces faites devant vous !</h3>
-                        <p>Soyez témoins de la transformation de fruits frais en une réalisation artistique. Le tout garanti sans additif ni conservateur. La manière de concevoir un dessert devant un public créé le spectacle et captive assez facilement les personnes qui regardent le processus de création. Chaque glace se fait différemment et le glacier doit alors adapter sa façon de faire pour réaliser de beaux rouleaux appétissants.</p>
-                    </div>
+    <main>
+        {{ include("partials/_social-header.html.twig") }}
+        <section>
+            <picture class="banner">
+                <source media="(max-width:768px)" srcset="{{ asset('/images/dany-eldora-2-768.jpg') }} 768w">
+                <source media="(min-width:769px) and (max-width:1000px)" srcset="{{ asset('/images/dany-eldora-2-1000.jpg') }} 1000w">
+                <source media="(min-width:1001px)" srcset="{{ asset('/images/dany-eldora-2.jpg') }} 1920w">
+                <img src="{{ asset('/images/dany-eldora-2.jpg') }}" alt="Dany Eldora geneve">
+            </picture>
+            <div class="container splash splash-over-image align-items-center align-items-end-medium-up align-items-end-medium-down">
+                <div class="mt-20 mb-100 mb-small-100">
+                    <h1 class="txt-c txt-white banner-title">GLACES ROULÉE, UNE CUISINE MINUTE SAVOUREUSE ET SPÉCTACULAIRE FAITE PAR DES ARTISANS PASSIONNÉS</h1>
                 </div>
             </div>
-        </div>
-    </section>
-    <aside class="mt-100 mb-100 mb-small-100 mt-small-100">
-        <div class="container">
-            <div class="banner-middle">
-                <picture>
-                    <img src="{{ asset('/images/chocolat-air.png') }}" class="banner-middle-image--top" alt="Chocolat aerien">
-                    <img src="{{ asset('/images/babana-air.png') }}" class="banner-middle-image--middle" alt="Banane aerien">
-                    <img src="{{ asset('/images/bananasplit-air.png') }}" class="banner-middle-image--bottom" alt="Glace Banana Split">
-                </picture>
-                <h3 class="custom-title">UNE GLACE MINUTE FAITE DEVANT VOUS :“TU PEUX PAS PLUS FRAIS !”</h3>
-            </div>
-        </div>
-    </aside>
-    <section>
-        <div class="container">
-            <div class="row-stretch gutter gutter-columns">
-                <div class="col-12 col-md-6">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/lausanne-sur-mer-570.jpg') }}" alt="Lausanne sur mer">
-                            <figcation class="text-caption caption-top-left">Lausanne sur Mer</figcation>
-                        </figure>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row-stretch gutter gutter-columns">
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/celibart-570.jpg') }}" alt="Evenement celib'art">
+                                <figcaption class="text-caption caption-top-right">Célib’Art</figcaption>
+                            </figure>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <h3>Un spectacle pour les fêtes et autres événements </h3>
-                        <p>Nous sommes à votre disposition pour toutes vos anifestations comme vos fêtes d’entreprise, mariages, anniversaires, festivals. Nous nous déplaçons également pour vos événements privés. Notre entreprise vous permet d’avoir un traiteur où vous le désirez partout en Suisse. Nous saurons vous combler avec notre formule “ à volonté”</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 hidden-up">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/grandvaux.jpg') }}" alt="Evenement privé à Grand Vaux">
-                            <figcation class="text-caption caption-top-right">Grand Vaux</figcation>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <h3>Des glaces Bio et locale avec un goût exceptionnel</h3>
-                        <p>Nous prenons garde de toujours préférer les produits régionaux comme le lait cru, la crème, les fraises, les framboises, les abricots, etc. Bien entendu, les fruits qui ne se cultivent pas sous nos latitudes sont achetés dans des petites épiceries que nous avons choisi pour leur label Bio et fairtrade.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 hidden-down">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/grandvaux.jpg') }}" alt="Evenement privé à Grand Vaux">
-                            <figcation class="text-caption caption-top-right">Grand Vaux</figcation>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/festival-des-roses.jpg') }}" alt="Festival des Roses">
-                            <figcation class="text-caption caption-top-left">Festival des Roses</figcation>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <h3>Personnalisation tous azimuts pour vos events</h3>
-                        <p>Communiquez-nous vos préférences en matière de saveurs, nous saurons nous adapter à vos envies. Nous avons pensé aux personnes intolérantes au lactose qui pourront tester notre mélange de lait de coco et crème de coco créant une surprenante saveur qui n’a rien à envier à la recette traditionnelle à base de lait et crème.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 hidden-up">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/bricelet.jpg') }}" alt="Bricelet savoureux">
-                            <figcation class="text-caption caption-top-right">Bricelet savoureux</figcation>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <h3>Des glaces avec des bricelets savoureux accompagné du topping de votre choix</h3>
-                        <p>Nous avons une politique sans déchets. Nous cuisinons également nos propres bricelets le jour même, donnant ainsi une gourmandise de plus pour vos papilles. Cette pâtisserie est en option, car nous n’obligeons personne à la ripaille, mais nous sommes soucieux de l’écologie et essayons de changer les mœurs de consommation du mieux possible. C’est pourquoi, chez Iceroll, la seule chose qui se jette est la cuillère en bois.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 hidden-down">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/bricelet.jpg') }}" alt="Bricelet savoureux">
-                            <figcation class="text-caption caption-top-right">Bricelet savoureux</figcation>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <h3>Vos invités seront ébahi avec un concept original de glaces faites devant vous !</h3>
+                            <p>Soyez témoins de la transformation de fruits frais en une réalisation artistique. Le tout garanti sans additif ni conservateur. La manière de concevoir un dessert devant un public créé le spectacle et captive assez facilement les personnes qui regardent le processus de création. Chaque glace se fait différemment et le glacier doit alors adapter sa façon de faire pour réaliser de beaux rouleaux appétissants.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="mt-small-50 mb-small-50 mt-100 mb-100">
-        <div class="swiper__container">
-            <div class="swiper-l">
-                <h2 class="mb-20">La galerie des glaces roulées</h2>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-avocat.jpg') }}" alt="Glace avocat">
-                            <figcaption><p>Avocat</p></figcaption>
-                        </figure>
+        </section>
+        <aside class="mt-100 mb-100 mb-small-100 mt-small-100">
+            <div class="container">
+                <div class="banner-middle">
+                    <picture>
+                        <img src="{{ asset('/images/chocolat-air.png') }}" class="banner-middle-image--top" alt="Chocolat aerien">
+                        <img src="{{ asset('/images/babana-air.png') }}" class="banner-middle-image--middle" alt="Banane aerien">
+                        <img src="{{ asset('/images/bananasplit-air.png') }}" class="banner-middle-image--bottom" alt="Glace Banana Split">
+                    </picture>
+                    <h3 class="custom-title">UNE GLACE MINUTE FAITE DEVANT VOUS :“TU PEUX PAS PLUS FRAIS !”</h3>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <div class="container">
+                <div class="row-stretch gutter gutter-columns">
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/lausanne-sur-mer-570.jpg') }}" alt="Lausanne sur mer">
+                                <figcation class="text-caption caption-top-left">Lausanne sur Mer</figcation>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-mangue.jpg') }}" alt="Glace mangue">
-                            <figcaption><p>Mangue</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <h3>Un spectacle pour les fêtes et autres événements </h3>
+                            <p>Nous sommes à votre disposition pour toutes vos anifestations comme vos fêtes d’entreprise, mariages, anniversaires, festivals. Nous nous déplaçons également pour vos événements privés. Notre entreprise vous permet d’avoir un traiteur où vous le désirez partout en Suisse. Nous saurons vous combler avec notre formule “ à volonté”</p>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-fraise.jpg') }}" alt="Glace-fraise">
-                            <figcaption><p>Fraise</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6 hidden-up">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/grandvaux.jpg') }}" alt="Evenement privé à Grand Vaux">
+                                <figcation class="text-caption caption-top-right">Grand Vaux</figcation>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-vanille.jpg') }}"
-                                 alt="Glace vanille">
-                            <figcaption><p>Vanille</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <h3>Des glaces Bio et locale avec un goût exceptionnel</h3>
+                            <p>Nous prenons garde de toujours préférer les produits régionaux comme le lait cru, la crème, les fraises, les framboises, les abricots, etc. Bien entendu, les fruits qui ne se cultivent pas sous nos latitudes sont achetés dans des petites épiceries que nous avons choisi pour leur label Bio et fairtrade.</p>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-maracuja.jpg') }}" alt="Géace maracuja">
-                            <figcaption><p>Fruit de la passion</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6 hidden-down">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/grandvaux.jpg') }}" alt="Evenement privé à Grand Vaux">
+                                <figcation class="text-caption caption-top-right">Grand Vaux</figcation>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-framboise.jpg') }}" alt="Glace framboise">
-                            <figcaption><p>Framboise</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/festival-des-roses.jpg') }}" alt="Festival des Roses">
+                                <figcation class="text-caption caption-top-left">Festival des Roses</figcation>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-caramel.jpg') }}" alt="Glace caramel">
-                            <figcaption><p>Caramel</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <h3>Personnalisation tous azimuts pour vos events</h3>
+                            <p>Communiquez-nous vos préférences en matière de saveurs, nous saurons nous adapter à vos envies. Nous avons pensé aux personnes intolérantes au lactose qui pourront tester notre mélange de lait de coco et crème de coco créant une surprenante saveur qui n’a rien à envier à la recette traditionnelle à base de lait et crème.</p>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-chocolat.jpg') }}" alt="Glace chocolat">
-                            <figcaption><p>Chocolat</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6 hidden-up">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/bricelet.jpg') }}" alt="Bricelet savoureux">
+                                <figcation class="text-caption caption-top-right">Bricelet savoureux</figcation>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-pistache.jpg') }}"
-                                 alt="Glace pistache">
-                            <figcaption><p>Pistache</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <h3>Des glaces avec des bricelets savoureux accompagné du topping de votre choix</h3>
+                            <p>Nous avons une politique sans déchets. Nous cuisinons également nos propres bricelets le jour même, donnant ainsi une gourmandise de plus pour vos papilles. Cette pâtisserie est en option, car nous n’obligeons personne à la ripaille, mais nous sommes soucieux de l’écologie et essayons de changer les mœurs de consommation du mieux possible. C’est pourquoi, chez Iceroll, la seule chose qui se jette est la cuillère en bois.</p>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-mure.jpg') }}" alt="Glace mure">
-                            <figcaption><p>Mùre</p></figcaption>
-                        </figure>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-oreo.jpg') }}"
-                                 alt="Géace oreo">
-                            <figcaption><p>Oreo</p></figcaption>
-                        </figure>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure class="card-button">
-                            <a href="#">
-                                <img src="{{ asset('/images/glace-action.jpg') }}" alt="Glace action">
-                                <button>Voir plus</button>
-                                <figcaption><p>Voir</p></figcaption>
-                            </a>
-                        </figure>
+                    <div class="col-12 col-md-6 hidden-down">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/bricelet.jpg') }}" alt="Bricelet savoureux">
+                                <figcation class="text-caption caption-top-right">Bricelet savoureux</figcation>
+                            </figure>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
             </div>
-            <div class="shadow-overflow"></div>
-        </div>
-        <a href="#" class="btn-flex">
-            <button class="btn btn-primary btn-max-w btn-txt-center">Les glaces</button>
-        </a>
-    </section>
-</main>
+        </section>
+        <section class="mt-small-50 mb-small-50 mt-100 mb-100">
+            <div class="swiper__container">
+                <div class="swiper-l">
+                    <h2 class="mb-20">La galerie des glaces roulées</h2>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-avocat.jpg') }}" alt="Glace avocat">
+                                <figcaption><p>Avocat</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-mangue.jpg') }}" alt="Glace mangue">
+                                <figcaption><p>Mangue</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-fraise.jpg') }}" alt="Glace-fraise">
+                                <figcaption><p>Fraise</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-vanille.jpg') }}"
+                                     alt="Glace vanille">
+                                <figcaption><p>Vanille</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-maracuja.jpg') }}" alt="Géace maracuja">
+                                <figcaption><p>Fruit de la passion</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-framboise.jpg') }}" alt="Glace framboise">
+                                <figcaption><p>Framboise</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-caramel.jpg') }}" alt="Glace caramel">
+                                <figcaption><p>Caramel</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-chocolat.jpg') }}" alt="Glace chocolat">
+                                <figcaption><p>Chocolat</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-pistache.jpg') }}"
+                                     alt="Glace pistache">
+                                <figcaption><p>Pistache</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-mure.jpg') }}" alt="Glace mure">
+                                <figcaption><p>Mùre</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-oreo.jpg') }}"
+                                     alt="Géace oreo">
+                                <figcaption><p>Oreo</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-button">
+                                <a href="#">
+                                    <img src="{{ asset('/images/glace-action.jpg') }}" alt="Glace action">
+                                    <button>Voir plus</button>
+                                    <figcaption><p>Voir</p></figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="shadow-overflow"></div>
+            </div>
+            <a href="#" class="btn-flex">
+                <button class="btn btn-primary btn-max-w btn-txt-center">Les glaces</button>
+            </a>
+        </section>
+    </main>
+    {{ include("partials/_footer.html.twig") }}
 {% endblock %}

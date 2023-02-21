@@ -3,582 +3,587 @@
 {% block title %}Iceroll-Delice Devis{% endblock %}
 
 {% block body %}
-<main>
-    {{ include("partials/_social-header.html.twig") }}
-    <div class="background-gradient-1"></div>
-    <section>
-        <picture class="banner banner-devis">
-            <source media="(max-width:768px)" srcset="{{ asset('/images/particles-768.png') }} 768w">
-            <source media="(min-width:769px) and (max-width:1000px)" srcset="{{ asset('/images/particles-1000.png') }} 1000w">
-            <source media="(min-width:1001px)" srcset="{{ asset('/images/particles.png') }} 1920w">
-            <img src="{{ asset('/images/particles.png') }}" alt="Dany Eldora geneve">
-        </picture>
-        <div class="container splash align-items-center-medium-up align-items-end-medium-down">
-            <img src="{{ asset('/images/background-fruit-2-270.png') }}" alt="flying mango" class="background-image-over background-fruit-2">
-            <img src="{{ asset('/images/background-icecream-2-2-350.png') }}" alt="flying icecream mango" class="background-image-under background-icecream-2">
-            <div class="mt-20 mb-50 mb-small-100">
-                <img class="home-logo" src="{{ asset('/images/logo-iceRollDelice-inline.svg') }}" alt="Web site logo iceroll delice">
-                <h1 class="txt-l big-title">Carte & prix: faites votre devis</h1>
-                <div class="row-top gutter-start gutter mt-50">
-                    <div class="col-12 col-md-8">
-                        <p class="intro">Nos glaces roulées ice roll au lait bio et à la crème ou au lait de coco et crème de coco pour les personnes intolérantes à la lactose sont les mélanges principaux de nos glaces. </p>
+    <main>
+        {{ include("partials/_social-header.html.twig") }}
+        <div class="background-gradient-1"></div>
+        <section>
+            <picture class="banner banner-devis">
+                <source media="(max-width:768px)" srcset="{{ asset('/images/particles-768.png') }} 768w">
+                <source media="(min-width:769px) and (max-width:1000px)" srcset="{{ asset('/images/particles-1000.png') }} 1000w">
+                <source media="(min-width:1001px)" srcset="{{ asset('/images/particles.png') }} 1920w">
+                <img src="{{ asset('/images/particles.png') }}" alt="Dany Eldora geneve">
+            </picture>
+            <div class="container splash align-items-center-medium-up align-items-end-medium-down">
+                <img src="{{ asset('/images/background-fruit-2-270.png') }}" alt="flying mango" class="background-image-over background-fruit-2">
+                <img src="{{ asset('/images/background-icecream-2-2-350.png') }}" alt="flying icecream mango" class="background-image-under background-icecream-2">
+                <div class="mt-20 mb-50 mb-small-100">
+                    <img class="home-logo" src="{{ asset('/images/logo-iceRollDelice-inline.svg') }}" alt="Web site logo iceroll delice">
+                    <h1 class="txt-l big-title">Carte & prix: faites votre devis</h1>
+                    <div class="row-top gutter-start gutter mt-50">
+                        <div class="col-12 col-md-8">
+                            <p class="intro">Nos glaces roulées ice roll au lait bio et à la crème ou au lait de coco et crème de coco pour les personnes intolérantes à la lactose sont les mélanges principaux de nos glaces. </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="mt-50 mb-200">
-        <form class="form-modal">
-            <div class="progress-bullet">
-                <div class="bullet bullet-1 bullet-active">
-                    <p class="bullet-title">Choix de glaces</p>
-                    <div class="bullet-point">
-                        <span>1</span>
+        </section>
+        <section class="mt-50 mb-200">
+            <form class="form-modal">
+                <div class="progress-bullet">
+                    <div class="bullet bullet-1 bullet-active">
+                        <p class="bullet-title">Choix de glaces</p>
+                        <div class="bullet-point">
+                            <span>1</span>
+                        </div>
+                        <svg class="check" xmlns="http://www.w3.org/2000/svg" width="32.55" height="23.5" viewBox="0 0 32.55 23.5">
+                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M18.9,35.7,7.7,24.5l2.15-2.15L18.9,31.4,38.1,12.2l2.15,2.15Z" transform="translate(-7.7 -12.2)"/>
+                        </svg>
                     </div>
-                    <svg class="check" xmlns="http://www.w3.org/2000/svg" width="32.55" height="23.5" viewBox="0 0 32.55 23.5">
-                        <path id="done_FILL0_wght400_GRAD0_opsz48" d="M18.9,35.7,7.7,24.5l2.15-2.15L18.9,31.4,38.1,12.2l2.15,2.15Z" transform="translate(-7.7 -12.2)"/>
-                    </svg>
-                </div>
-                <div class="bullet bullet-2">
-                    <p class="bullet-title">Infos de l'event</p>
-                    <div class="bullet-point">
-                        <span>2</span>
+                    <div class="bullet bullet-2">
+                        <p class="bullet-title">Infos de l'event</p>
+                        <div class="bullet-point">
+                            <span>2</span>
+                            <svg class="check" xmlns="http://www.w3.org/2000/svg" width="32.55" height="23.5" viewBox="0 0 32.55 23.5">
+                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M18.9,35.7,7.7,24.5l2.15-2.15L18.9,31.4,38.1,12.2l2.15,2.15Z" transform="translate(-7.7 -12.2)"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="bullet bullet-3">
+                        <p class="bullet-title">Envoi du devis</p>
+                        <div class="bullet-point">
+                            <span>3</span>
+                        </div>
                         <svg class="check" xmlns="http://www.w3.org/2000/svg" width="32.55" height="23.5" viewBox="0 0 32.55 23.5">
                             <path id="done_FILL0_wght400_GRAD0_opsz48" d="M18.9,35.7,7.7,24.5l2.15-2.15L18.9,31.4,38.1,12.2l2.15,2.15Z" transform="translate(-7.7 -12.2)"/>
                         </svg>
                     </div>
                 </div>
-                <div class="bullet bullet-3">
-                    <p class="bullet-title">Envoi du devis</p>
-                    <div class="bullet-point">
-                        <span>3</span>
-                    </div>
-                    <svg class="check" xmlns="http://www.w3.org/2000/svg" width="32.55" height="23.5" viewBox="0 0 32.55 23.5">
-                        <path id="done_FILL0_wght400_GRAD0_opsz48" d="M18.9,35.7,7.7,24.5l2.15-2.15L18.9,31.4,38.1,12.2l2.15,2.15Z" transform="translate(-7.7 -12.2)"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="form-modal--container">
-                <div class="container-modal step-1 animated animated-disable">
-                    <h2 class="mb-20 txt-c">Sélectionnez vos parfums</h2>
-                    <div class="row-top gutter">
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="strawberry" name="strawberry">
-                                <label for="strawberry">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Fraise</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-fraise.jpg') }}" alt="parfum fraise"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="raspberry" name="raspberry">
-                                <label for="raspberry">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Framboise</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-framboise.jpg') }}" alt="parfum framboise"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="chocolate" name="chocolate">
-                                <label for="chocolate">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Chocolat</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-chocolat.jpg') }}" alt="parfum chocolat"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="vanilla" name="vanilla">
-                                <label for="vanilla">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Vanille</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-vanille.jpg') }}" alt="parfum vanille"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="bananasplit" name="bananasplit">
-                                <label for="bananasplit">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Banane &amp; Chocolat</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-bananeChocolat.jpg') }}" alt="parfum bananeChocolat"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="gingerlime" name="gingerlime">
-                                <label for="gingerlime">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Gingembre &amp; Lime</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-limeGingembre.jpg') }}" alt="parfum lime gingembre"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="melonmint" name="melonmint">
-                                <label for="melonmint">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Melon &amp; Menthe</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-melonMenthe.jpg') }}" alt="parfum melon menthe"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="pistachio" name="pistachio">
-                                <label for="pistachio">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Pistache</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-pistache.jpg') }}" alt="parfum pistache"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="blueberry" name="blueberry">
-                                <label for="blueberry">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Myrtille</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-myrtille.jpg') }}" alt="parfum myrtille"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="blackberry" name="blackberry">
-                                <label for="blackberry">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Mûre</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-mure.jpg') }}" alt="parfum mure"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="mango" name="mango">
-                                <label for="mango">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Mangue</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-mangue.jpg') }}" alt="parfum mangue"></picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-top gutter">
-                        <h3 class="mb-20 middle-title">Personnalisez vos glaces avec les ingrédients suivant :</h3>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="chantilly" name="chantilly">
-                                <label for="chantilly">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Chantille</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-chantille.jpg') }}" alt="parfum chantille"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="topping" name="topping">
-                                <label for="topping">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Topping</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-topping.jpg') }}" alt="parfum topping"></picture>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="bricelet" name="bricelet">
-                                <label for="bricelet">
-                                    <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
-                                        <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
-                                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                    <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
-                                        <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
-                                    </svg>
-                                    <span class="img-hover"></span>
-                                    <span class="txt-label">Bricelet</span>
-                                </label>
-                                <picture><img src="{{ asset('/images/carte-bricelet.jpg') }}" alt="parfum bricelet"></picture>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-12">
-                            <div class="center-center mb-20 mt-50">
-                                <div class="btn btn-success next-1 btn-max-w btn-txt-center">Suivant</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-modal step-2 animated animated-active">
-                    <div class="row-top gutter">
-                        <div class="col-12 col-md-12">
-                            <h2 class="pt-30 pb-10">Compléter les informations de votre événement</h2>
-                            <p class="mt-20 mb-20 description">Nos nombreuses expériences nous ont appris à nous adapter aux besoins de nos clients. Nous saurons, avec vous, déterminer la meilleure façon de nous inscrire au sein de votre événement. Commencez par remplir le formulaire pour nous préciser ces informations et nous pourrons aller de l’avant pour vous aider.</p>
-                        </div>
-                        <div class="col-12 col-md-12">
-                            <h4>Code promotionnel ou votre carte cadeau</h4>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="code" class="field-label">Code</label>
-                                <input id="code" type="text" class="field-input">
-                                <span class="field-error">Une erreur s'est produite</span>
-                                <span class="field-helper">Mettez votre code promo (chiffres)</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6"></div>
-                        <div class="col-12 col-md-12"><h4>Dégustation</h4></div>
-                        <div class="col-12 col-md-12">
-                            <div class="row-top">
-                                <div class="col-12 col-md-4">
-                                    <div class="field-check">
-                                        <input type="checkbox" name="tastingMode" class="field-check tastingMode" value="tastingMode" id="tastingMode">
-                                        <label for="tasting" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-8">
-                                    <p class="field-info tastingMode field-info-no field-info-active">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28.999" height="28.999" viewBox="0 0 28.999 28.999">
-                                            <path id="info_FILL0_wght400_GRAD0_opsz48" d="M17.521,25.749H19.7v-8.7H17.521ZM18.5,14.367a1.191,1.191,0,0,0,.852-.326,1.1,1.1,0,0,0,.344-.834,1.218,1.218,0,0,0-.344-.87,1.182,1.182,0,0,0-1.7,0,1.218,1.218,0,0,0-.344.87,1.1,1.1,0,0,0,.344.834,1.191,1.191,0,0,0,.852.326ZM18.5,33a14.03,14.03,0,0,1-5.619-1.142,14.608,14.608,0,0,1-7.739-7.739,14.484,14.484,0,0,1,0-11.273,14.491,14.491,0,0,1,3.117-4.6,14.863,14.863,0,0,1,4.622-3.1,14.484,14.484,0,0,1,11.273,0,14.477,14.477,0,0,1,7.7,7.7,14.484,14.484,0,0,1,0,11.273,14.863,14.863,0,0,1-3.1,4.622,14.491,14.491,0,0,1-4.6,3.117A14.119,14.119,0,0,1,18.5,33Zm.036-2.175a11.817,11.817,0,0,0,8.7-3.607,11.95,11.95,0,0,0,3.589-8.754,11.847,11.847,0,0,0-3.589-8.7A11.89,11.89,0,0,0,18.5,6.175,11.907,11.907,0,0,0,9.782,9.764,11.859,11.859,0,0,0,6.175,18.5a11.877,11.877,0,0,0,3.607,8.718A11.919,11.919,0,0,0,18.536,30.824ZM18.5,18.5Z" transform="translate(-4 -4)"/>
+                <div class="form-modal--container">
+                    <div class="container-modal step-1 animated animated-disable">
+                        <h2 class="mb-20 txt-c">Sélectionnez vos parfums</h2>
+                        <div class="row-top gutter">
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="strawberry" name="strawberry">
+                                    <label for="strawberry">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
                                         </svg>
-                                        <span>Le mode dégustation influence la rapidité d’exécution d’une glace. Le prix sera moins cher. Il sera servit environ deux rouleaux par personnes jusqu’à épuisement du stock. Ce mode est idéal à l’ouverture d’une fête ou s’il y a une limite de temps très astreignante.</span>
-                                    </p>
-                                    <p class="field-info tastingMode field-info-yes">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28.999" height="28.999" viewBox="0 0 28.999 28.999">
-                                            <path id="info_FILL0_wght400_GRAD0_opsz48" d="M17.521,25.749H19.7v-8.7H17.521ZM18.5,14.367a1.191,1.191,0,0,0,.852-.326,1.1,1.1,0,0,0,.344-.834,1.218,1.218,0,0,0-.344-.87,1.182,1.182,0,0,0-1.7,0,1.218,1.218,0,0,0-.344.87,1.1,1.1,0,0,0,.344.834,1.191,1.191,0,0,0,.852.326ZM18.5,33a14.03,14.03,0,0,1-5.619-1.142,14.608,14.608,0,0,1-7.739-7.739,14.484,14.484,0,0,1,0-11.273,14.491,14.491,0,0,1,3.117-4.6,14.863,14.863,0,0,1,4.622-3.1,14.484,14.484,0,0,1,11.273,0,14.477,14.477,0,0,1,7.7,7.7,14.484,14.484,0,0,1,0,11.273,14.863,14.863,0,0,1-3.1,4.622,14.491,14.491,0,0,1-4.6,3.117A14.119,14.119,0,0,1,18.5,33Zm.036-2.175a11.817,11.817,0,0,0,8.7-3.607,11.95,11.95,0,0,0,3.589-8.754,11.847,11.847,0,0,0-3.589-8.7A11.89,11.89,0,0,0,18.5,6.175,11.907,11.907,0,0,0,9.782,9.764,11.859,11.859,0,0,0,6.175,18.5a11.877,11.877,0,0,0,3.607,8.718A11.919,11.919,0,0,0,18.536,30.824ZM18.5,18.5Z" transform="translate(-4 -4)"/>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
                                         </svg>
-                                        <span>Le mode restauration nous donne le temps de satisfaire le convive avec une glace adapté à ses envies, chaque personnes pourra avoir plusieurs glaces.</span>
-                                    </p>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Fraise</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-fraise.jpg') }}" alt="parfum fraise"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="raspberry" name="raspberry">
+                                    <label for="raspberry">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Framboise</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-framboise.jpg') }}" alt="parfum framboise"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="chocolate" name="chocolate">
+                                    <label for="chocolate">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Chocolat</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-chocolat.jpg') }}" alt="parfum chocolat"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="vanilla" name="vanilla">
+                                    <label for="vanilla">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Vanille</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-vanille.jpg') }}" alt="parfum vanille"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="bananasplit" name="bananasplit">
+                                    <label for="bananasplit">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Banane &amp; Chocolat</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-bananeChocolat.jpg') }}" alt="parfum bananeChocolat"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="gingerlime" name="gingerlime">
+                                    <label for="gingerlime">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Gingembre &amp; Lime</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-limeGingembre.jpg') }}" alt="parfum lime gingembre"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="melonmint" name="melonmint">
+                                    <label for="melonmint">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Melon &amp; Menthe</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-melonMenthe.jpg') }}" alt="parfum melon menthe"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="pistachio" name="pistachio">
+                                    <label for="pistachio">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Pistache</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-pistache.jpg') }}" alt="parfum pistache"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="blueberry" name="blueberry">
+                                    <label for="blueberry">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Myrtille</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-myrtille.jpg') }}" alt="parfum myrtille"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="blackberry" name="blackberry">
+                                    <label for="blackberry">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Mûre</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-mure.jpg') }}" alt="parfum mure"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="mango" name="mango">
+                                    <label for="mango">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Mangue</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-mangue.jpg') }}" alt="parfum mangue"></picture>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-12">
-                            <h4>Adresse de l’événement</h4>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="address" class="field-label">Adresse de l’événement</label>
-                                <input id="address" type="text" class="field-input">
+                        <div class="row-top gutter">
+                            <h3 class="mb-20 middle-title">Personnalisez vos glaces avec les ingrédients suivant :</h3>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="chantilly" name="chantilly">
+                                    <label for="chantilly">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Chantille</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-chantille.jpg') }}" alt="parfum chantille"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="topping" name="topping">
+                                    <label for="topping">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Topping</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-topping.jpg') }}" alt="parfum topping"></picture>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="bricelet" name="bricelet">
+                                    <label for="bricelet">
+                                        <svg class="add" xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+                                            <g id="Groupe_14" data-name="Groupe 14" transform="translate(-0.042 0.004)">
+                                                <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.042 -0.004)" fill="#198754"/>
+                                                <path id="done_FILL0_wght400_GRAD0_opsz48" d="M19.729,37.44,7.7,25.411,10.009,23.1l9.72,9.72L40.351,12.2l2.309,2.309Z" transform="translate(6.023 7.327)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                        <svg class="remove" xmlns="http://www.w3.org/2000/svg" width="29.321" height="29.321" viewBox="0 0 29.321 29.321">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48" d="M12.605,39.671,10.35,37.416,22.755,25.011,10.35,12.605l2.255-2.255L25.011,22.755,37.416,10.35l2.255,2.255L27.266,25.011,39.671,37.416l-2.255,2.255L25.011,27.266Z" transform="translate(-10.35 -10.35)" fill="#fff"/>
+                                        </svg>
+                                        <span class="img-hover"></span>
+                                        <span class="txt-label">Bricelet</span>
+                                    </label>
+                                    <picture><img src="{{ asset('/images/carte-bricelet.jpg') }}" alt="parfum bricelet"></picture>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="center-center mb-20 mt-50">
+                                    <div class="btn btn-success next-1 btn-max-w btn-txt-center">Suivant</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="city" class="field-label">Ville</label>
-                                <input id="city" type="text" class="field-input">
+                    </div>
+                    <div class="container-modal step-2 animated -animated-active">
+                        {{ form_start(form) }}
+                        <div class="row-top gutter">
+                            <div class="col-12 col-md-12">
+                                <h2 class="pt-30 pb-10">Compléter les informations de votre événement</h2>
+                                <p class="mt-20 mb-20 description">Nos nombreuses expériences nous ont appris à nous adapter aux besoins de nos clients. Nous saurons, avec vous, déterminer la meilleure façon de nous inscrire au sein de votre événement. Commencez par remplir le formulaire pour nous préciser ces informations et nous pourrons aller de l’avant pour vous aider.</p>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <fieldset class="field-select">
-                                <div class="selected"><span>Choisir un canton</span></div>
-                                <div class="select-options">
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="vaud" name="vaud">
-                                        <label for="vaud">Vaud</label>
+                            <div class="col-12 col-md-12">
+                                <h4>Code promotionnel ou votre carte cadeau</h4>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                {{ form_row(form.code) }}
+                                <!--div class="field">
+                                    <label for="code" class="field-label">Code</label>
+                                    <input id="code" type="text" class="field-input">
+                                    <span class="field-error">Une erreur s'est produite</span>
+                                    <span class="field-helper">Mettez votre code promo (chiffres)</span>
+                                </div-->
+                            </div>
+                            <div class="col-md-6"></div>
+                            <div class="col-12 col-md-12"><h4>Dégustation</h4></div>
+                            <div class="col-12 col-md-12">
+                                <div class="row-top">
+                                    <div class="col-12 col-md-4">
+                                        <div class="field-check">
+                                            <input type="checkbox" name="tastingMode" class="field-check tastingMode" value="tastingMode" id="tastingMode">
+                                            <label for="tasting" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
+                                            <span class="field-error">Vous devez renseigner ce champ</span>
+                                        </div>
                                     </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="geneve" name="geneve">
-                                        <label for="geneve">Genève</label>
-                                    </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="neuchatel" name="neuchatel">
-                                        <label for="neuchatel">Neuchâtel</label>
-                                    </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="valais" name="valais">
-                                        <label for="valais">Valais</label>
-                                    </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="fribourg" name="fribourg">
-                                        <label for="fribourg">Fribourg</label>
-                                    </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="berne" name="berne">
-                                        <label for="berne">Berne</label>
-                                    </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="jura" name="jura">
-                                        <label for="jura">Jura</label>
+                                    <div class="col-12 col-md-8">
+                                        <p class="field-info tastingMode field-info-no field-info-active">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28.999" height="28.999" viewBox="0 0 28.999 28.999">
+                                                <path id="info_FILL0_wght400_GRAD0_opsz48" d="M17.521,25.749H19.7v-8.7H17.521ZM18.5,14.367a1.191,1.191,0,0,0,.852-.326,1.1,1.1,0,0,0,.344-.834,1.218,1.218,0,0,0-.344-.87,1.182,1.182,0,0,0-1.7,0,1.218,1.218,0,0,0-.344.87,1.1,1.1,0,0,0,.344.834,1.191,1.191,0,0,0,.852.326ZM18.5,33a14.03,14.03,0,0,1-5.619-1.142,14.608,14.608,0,0,1-7.739-7.739,14.484,14.484,0,0,1,0-11.273,14.491,14.491,0,0,1,3.117-4.6,14.863,14.863,0,0,1,4.622-3.1,14.484,14.484,0,0,1,11.273,0,14.477,14.477,0,0,1,7.7,7.7,14.484,14.484,0,0,1,0,11.273,14.863,14.863,0,0,1-3.1,4.622,14.491,14.491,0,0,1-4.6,3.117A14.119,14.119,0,0,1,18.5,33Zm.036-2.175a11.817,11.817,0,0,0,8.7-3.607,11.95,11.95,0,0,0,3.589-8.754,11.847,11.847,0,0,0-3.589-8.7A11.89,11.89,0,0,0,18.5,6.175,11.907,11.907,0,0,0,9.782,9.764,11.859,11.859,0,0,0,6.175,18.5a11.877,11.877,0,0,0,3.607,8.718A11.919,11.919,0,0,0,18.536,30.824ZM18.5,18.5Z" transform="translate(-4 -4)"/>
+                                            </svg>
+                                            <span>Le mode dégustation influence la rapidité d’exécution d’une glace. Le prix sera moins cher. Il sera servit environ deux rouleaux par personnes jusqu’à épuisement du stock. Ce mode est idéal à l’ouverture d’une fête ou s’il y a une limite de temps très astreignante.</span>
+                                        </p>
+                                        <p class="field-info tastingMode field-info-yes">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28.999" height="28.999" viewBox="0 0 28.999 28.999">
+                                                <path id="info_FILL0_wght400_GRAD0_opsz48" d="M17.521,25.749H19.7v-8.7H17.521ZM18.5,14.367a1.191,1.191,0,0,0,.852-.326,1.1,1.1,0,0,0,.344-.834,1.218,1.218,0,0,0-.344-.87,1.182,1.182,0,0,0-1.7,0,1.218,1.218,0,0,0-.344.87,1.1,1.1,0,0,0,.344.834,1.191,1.191,0,0,0,.852.326ZM18.5,33a14.03,14.03,0,0,1-5.619-1.142,14.608,14.608,0,0,1-7.739-7.739,14.484,14.484,0,0,1,0-11.273,14.491,14.491,0,0,1,3.117-4.6,14.863,14.863,0,0,1,4.622-3.1,14.484,14.484,0,0,1,11.273,0,14.477,14.477,0,0,1,7.7,7.7,14.484,14.484,0,0,1,0,11.273,14.863,14.863,0,0,1-3.1,4.622,14.491,14.491,0,0,1-4.6,3.117A14.119,14.119,0,0,1,18.5,33Zm.036-2.175a11.817,11.817,0,0,0,8.7-3.607,11.95,11.95,0,0,0,3.589-8.754,11.847,11.847,0,0,0-3.589-8.7A11.89,11.89,0,0,0,18.5,6.175,11.907,11.907,0,0,0,9.782,9.764,11.859,11.859,0,0,0,6.175,18.5a11.877,11.877,0,0,0,3.607,8.718A11.919,11.919,0,0,0,18.536,30.824ZM18.5,18.5Z" transform="translate(-4 -4)"/>
+                                            </svg>
+                                            <span>Le mode restauration nous donne le temps de satisfaire le convive avec une glace adapté à ses envies, chaque personnes pourra avoir plusieurs glaces.</span>
+                                        </p>
                                     </div>
                                 </div>
-                            </fieldset>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <h4>Adresse de l’événement</h4>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="address" class="field-label">Adresse de l’événement</label>
+                                    <input type="text" id="address" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="city" class="field-label">Ville</label>
+                                    <input type="text" id="city" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <fieldset class="field-select">
+                                    <div class="selected"><span>Choisir un canton</span></div>
+                                    <div class="select-options">
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="vaud" name="vaud">
+                                            <label for="vaud">Vaud</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="geneve" name="geneve">
+                                            <label for="geneve">Genève</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="neuchatel" name="neuchatel">
+                                            <label for="neuchatel">Neuchâtel</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="valais" name="valais">
+                                            <label for="valais">Valais</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="fribourg" name="fribourg">
+                                            <label for="fribourg">Fribourg</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="berne" name="berne">
+                                            <label for="berne">Berne</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="jura" name="jura">
+                                            <label for="jura">Jura</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="postalCode" class="field-label">N° postal</label>
+                                    <input id="postalCode" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <h4>Précision sur votre événement</h4>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="eventType" class="field-label">Type d’événement</label>
+                                    <input id="eventType" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="eventName" class="field-label">Nom de l’événement</label>
+                                    <input id="eventName" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="eventMembreNombre" class="field-label">Nombre de convives</label>
+                                    <input id="eventMembreNombre" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="advanceTime" class="field-label">Temps d’avance</label>
+                                    <input id="advanceTime" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="eventdate" class="field-label">Date de l’événement</label>
+                                    <input id="eventdate" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="eventTiming" class="field-label">Temps à disposition pour faire le show</label>
+                                    <input id="eventTiming" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="showtime" class="field-label">Heure du show</label>
+                                    <input id="showtime" type="text" class="field-input">
+                                </div>
+                                <p class="field-info">Devons nous être prêt à l’avance ?</p>
+                            </div>
+                            <div class="col-12 col-md-6"></div>
+                            <div class="col-12 col-md-12"><h4>Personne intolérante à la lactose ?</h4></div>
+                            <div class="col-12 col-md-4">
+                                <div class="field-check">
+                                    <input type="checkbox" name="lactose" class="field-check" value="lactose" id="lactose">
+                                    <label for="lactose" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8"></div>
+                            <div class="col-12 col-md-12"><h4>Source d’alimentation électrique proche d’au moins 50 mètres</h4></div>
+                            <div class="col-12 col-md-4">
+                                <div class="field-check">
+                                    <input type="checkbox" name="supply" class="field-check" value="supply" id="supply">
+                                    <label for="supply" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8"></div>
+                            <div class="col-12 col-md-12"><h4>Le site est accessible de plein pied ?</h4></div>
+                            <div class="col-12 col-md-4">
+                                <div class="field-check">
+                                    <input type="checkbox" name="access" class="field-check" value="access" id="access">
+                                    <label for="access" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8"></div>
+                            <div class="col-12 col-md-12">
+                                <div class="center-center mb-20 mt-50">
+                                    <div class="btn btn-danger prev-2 btn-max-w btn-txt-center">Précédent</div>
+                                    <div class="btn btn-success next-2 btn-max-w btn-txt-center">Suivant</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8"></div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="postalCode" class="field-label">N° postal</label>
-                                <input id="postalCode" type="text" class="field-input">
+                        {{ form_end(form) }}
+                    </div>
+                    <div class="container-modal step-3 animated animated-disable">
+                        <div class="row-top gutter">
+                            <div class="col-12 col-md-12">
+                                <h2 class="pt-30 pb-10">Envoyer le devis par email</h2>
+                                <p class="mt-20 mb-20 description">Les informations suivantes vous permettrons de vous envoyer le devis. Vous le récupérerez de votre boite mail.</p>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="field-radio">
+                                    <input id="female" value="female" name="gender" type="radio" class="field-radio">
+                                    <label for="female" class="field-label-radio">Femme</label>
+                                </div>
+                                <div class="field-radio">
+                                    <input id="male" value="male" name="gender" type="radio" class="field-radio">
+                                    <label for="male" class="field-label-radio">Homme</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="firstname" class="field-label">Prénom</label>
+                                    <input id="firstname" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="lastname" class="field-label">Nom</label>
+                                    <input id="lastname" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="email" class="field-label">Email</label>
+                                    <input id="email" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="field">
+                                    <label for="phone" class="field-label">Mobile</label>
+                                    <input id="phone" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="field">
+                                    <label for="subject" class="field-label">Sujet du mail</label>
+                                    <input id="subject" type="text" class="field-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="textarea field-message">
+                                    <label for="textarea" class="field-label-message">Message</label>
+                                    <textarea id="textarea" type="textarea" class="field-textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="center-center mb-20 mt-50">
+                                    <div class="btn btn-danger prev-3 btn-max-w btn-txt-center">Précédent</div>
+                                    <button class="btn btn-success btn-max-w btn-txt-center">Envoyer le devis</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-12">
-                            <h4>Précision sur votre événement</h4>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="eventType" class="field-label">Type d’événement</label>
-                                <input id="eventType" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="eventName" class="field-label">Nom de l’événement</label>
-                                <input id="eventName" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="eventMembreNombre" class="field-label">Nombre de convives</label>
-                                <input id="eventMembreNombre" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="advanceTime" class="field-label">Temps d’avance</label>
-                                <input id="advanceTime" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="eventdate" class="field-label">Date de l’événement</label>
-                                <input id="eventdate" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="eventTiming" class="field-label">Temps à disposition pour faire le show</label>
-                                <input id="eventTiming" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="showtime" class="field-label">Heure du show</label>
-                                <input id="showtime" type="text" class="field-input">
-                            </div>
-                            <p class="field-info">Devons nous être prêt à l’avance ?</p>
-                        </div>
-                        <div class="col-12 col-md-6"></div>
-                        <div class="col-12 col-md-12"><h4>Personne intolérante à la lactose ?</h4></div>
-                        <div class="col-12 col-md-4">
-                            <div class="field-check">
-                                <input type="checkbox" name="lactose" class="field-check" value="lactose" id="lactose">
-                                <label for="lactose" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-8"></div>
-                        <div class="col-12 col-md-12"><h4>Source d’alimentation électrique proche d’au moins 50 mètres</h4></div>
-                        <div class="col-12 col-md-4">
-                            <div class="field-check">
-                                <input type="checkbox" name="supply" class="field-check" value="supply" id="supply">
-                                <label for="supply" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-8"></div>
-                        <div class="col-12 col-md-12"><h4>Le site est accessible de plein pied ?</h4></div>
-                        <div class="col-12 col-md-4">
-                            <div class="field-check">
-                                <input type="checkbox" name="access" class="field-check" value="access" id="access">
-                                <label for="access" class="field-check-label"><span class="field-check-no">Non</span><span class="field-check-yes">Oui</span></label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-8"></div>
-                        <div class="col-12 col-md-12">
-                            <div class="center-center mb-20 mt-50">
-                                <div class="btn btn-danger prev-2 btn-max-w btn-txt-center">Précédent</div>
-                                <div class="btn btn-success next-2 btn-max-w btn-txt-center">Suivant</div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-8"></div>
                     </div>
                 </div>
-                <div class="container-modal step-3 animated animated-disable">
-                    <div class="row-top gutter">
-                        <div class="col-12 col-md-12">
-                            <h2 class="pt-30 pb-10">Envoyer le devis par email</h2>
-                            <p class="mt-20 mb-20 description">Les informations suivantes vous permettrons de vous envoyer le devis. Vous le récupérerez de votre boite mail.</p>
-                        </div>
-                        <div class="col-12 col-md-12">
-                            <div class="field-radio">
-                                <input id="female" value="female" name="gender" type="radio" class="field-radio">
-                                <label for="female" class="field-label-radio">Femme</label>
-                            </div>
-                            <div class="field-radio">
-                                <input id="male" value="male" name="gender" type="radio" class="field-radio">
-                                <label for="male" class="field-label-radio">Homme</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="firstname" class="field-label">Prénom</label>
-                                <input id="firstname" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="lastname" class="field-label">Nom</label>
-                                <input id="lastname" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="email" class="field-label">Email</label>
-                                <input id="email" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="field">
-                                <label for="phone" class="field-label">Mobile</label>
-                                <input id="phone" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-12">
-                            <div class="field">
-                                <label for="subject" class="field-label">Sujet du mail</label>
-                                <input id="subject" type="text" class="field-input">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-12">
-                            <div class="textarea field-message">
-                                <label for="textarea" class="field-label-message">Message</label>
-                                <textarea id="textarea" type="textarea" class="field-textarea"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-12">
-                            <div class="center-center mb-20 mt-50">
-                                <div class="btn btn-danger prev-3 btn-max-w btn-txt-center">Précédent</div>
-                                <button class="btn btn-success btn-max-w btn-txt-center">Envoyer le devis</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </section>
-</main>
+            </form>
+        </section>
+    </main>
+    {{ include("partials/_footer.html.twig") }}
 {% endblock %}

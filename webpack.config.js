@@ -26,7 +26,7 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('app', [
+    .addEntry('js/app', [
         './node_modules/jquery/dist/jquery.min.js',
         "./node_modules/swiper/swiper-bundle.min.js",
         './assets/js/swiper.js',
@@ -37,10 +37,22 @@ Encore
         './assets/js/select.js',
     ])
 
+    .addEntry('js/admin', [
+        './node_modules/jquery/dist/jquery.min.js',
+        './assets/js/menu.js',
+        './assets/js/form.js',
+        './assets/js/field-check.js',
+        './assets/js/select.js',
+    ])
+
     // Add CSS site stylesheets
     .addStyleEntry('css/app', [
         './node_modules/swiper/swiper.min.css',
-        './assets/styles/index.scss'
+        './assets/styles/index-app.scss'
+    ])
+
+    .addStyleEntry('css/admin', [
+        './assets/styles/index-admin.scss'
     ])
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)

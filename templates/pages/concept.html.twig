@@ -3,216 +3,217 @@
 {% block title %}Iceroll-Delice Accueil{% endblock %}
 
 {% block body %}
-<main>
-    {{ include("partials/_social-header.html.twig") }}
-    <section>
-        <picture class="banner banner-concept">
-            <source media="(max-width:768px)" srcset="{{ asset('/images/japan-business-768.jpg') }} 768w">
-            <source media="(min-width:769px) and (max-width:1000px)" srcset="{{ asset('/images/japan-business-1000.jpg') }} 1000w">
-            <source media="(min-width:1001px) and (max-width:1920px)" srcset="{{ asset('/images/japan-business.jpg') }} 1920w">
-            <source media="(min-width:1921px)" srcset="{{ asset('/images/japan-business-2048.jpg') }}">
-            <img src="{{ asset('/images/japan-business.jpg') }}" alt="Dany Eldora geneve">
-        </picture>
-        <div class="container splash splash-over-image align-items-center align-items-center-medium-up align-items-end-medium-down">
-            <img src="{{ asset('/images/background-fruit-4-300.png') }}" alt="flying blueberry" class="background-image-over background-fruit-4">
-            <img src="{{ asset('/images/background-icercream-4-400.png') }}" alt="flying icecream blueberry" class="background-image-under background-icecream-4">
-            <div class="splash-text mt-20 mb-50 mb-small-100">
-                <img class="home-logo" src="{{ asset('/images/logo-iceRollDelice-inline.svg') }}" alt="Web site logo iceroll delice">
-                <h1 class="txt-l big-title">UN DESSERT ORIGINAL FAIT PAR DES GLACIERS QUI  FONT LE SHOW</h1>
-                <div class="row-top gutter-start gutter mt-10">
-                    <div class="col-12 col-md-3">
-                        <a href="#"><button class="btn btn-primary">Voir la vidéo</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="clouds">
-            <img srcset="{{ asset('/images/cloud-1.png') }} 1920w, {{ asset('/images/cloud-1-1000.png') }} 1000w, {{ asset('/images/cloud-1-768.png') }} 7680w, {{ asset('/images/cloud-1-640.png') }} 640w, " src="{{ asset('/images/cloud-1.png') }}" style="--i:1;" alt="nuage">
-            <img srcset="{{ asset('/images/cloud-2.png') }} 1920w, {{ asset('/images/cloud-2-768.png') }} 7680w, {{ asset('/images/cloud-2-640.png') }} 640w, " src="{{ asset('/images/cloud-2.png') }}" style="--i:2;" alt="nuage">
-            <img srcset="{{ asset('/images/cloud-3.png') }} 1920w, {{ asset('/images/cloud-3-768.png') }} 7680w, {{ asset('/images/cloud-3-640.png') }} 640w, " src="{{ asset('/images/cloud-3.png') }}" style="--i:3;" alt="nuage">
-            <img srcset="{{ asset('/images/cloud-4.png') }} 1920w, {{ asset('/images/cloud-4-768.png') }} 7680w, {{ asset('/images/cloud-4-640.png') }} 640w, " src="{{ asset('/images/cloud-4.png') }}" style="--i:4;" alt="nuage">
-            <img srcset="{{ asset('/images/cloud-4.png') }} 1920w, {{ asset('/images/cloud-4-768.png') }} 7680w, {{ asset('/images/cloud-4-640.png') }} 640w, " src="{{ asset('/images/cloud-5.png') }}" style="--i:5;" alt="nuage">
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row-stretch gutter gutter-columns">
-                <div class="col-12 col-md-6 hidden-up">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/jeremy-1-544.jpg') }}" alt="cuisinier iceroller jeremy">
-                            <figcaption class="text-caption caption-center">Le glacier fait son spectacle pour chaque personne</figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <h3>Une nouvelle cuisine, une cuisine froide</h3>
-                        <p>Ces machines icerolls permettent de réaliser des mets froids de toutes sortes. Aussi bien des entrées froides que des desserts sont réalisables. C’est une petite révolution technique dans l’art de la gastronomie. En effet, tout se congèle presque instantanément grâce à un condensateur situé sous la plaque givrante. Cette nouvelle cuisine laisse libre court à l’imagination des cuisiniers qui l’utilisent dans la recherche gastronomique afin d’élaborer de nouveaux mets raffinés.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 hidden-down">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/jeremy-1-544.jpg') }}" alt="cuisinier iceroller jeremy">
-                            <figcaption class="text-caption caption-center">Le glacier fait son spectacle pour chaque personne</figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/dany-1-544.jpg') }}" alt="cuisinier iceroller dany">
-                            <figcaption class="text-caption caption-center">
-                                Un goût réalisé grâce à l’expérience et le savoir faire
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <h3>Mais d’où ça vient ?</h3>
-                        <p>A l’origine, ce type de machine nous provient du Japon, mais les pays tropicaux ont eu plus de succès pour démocratiser le concept dans le Sud-Est asiatique; en Thaïlande notamment, car ils peuvent le faire directement dans la rue, devant les passants.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <aside class="mt-200 mt-small-100 mb-200 mb-small-100">
-        <figure  class="gallery__banner">
-            <img srcset="{{ asset('/images/miam-festival-1000.jpg') }} 1000w" src="{{ asset('/images/miam-festival.jpg') }}" alt="Les glaces roulées au miam festival de Lausanne">
-            <figcaption class="text-caption caption-center">Miam Festival</figcaption>
-        </figure>
-    </aside>
-    <section>
-        <div class="container">
-            <div class="row-stretch gutter gutter-columns">
-                <div class="col-12 col-md-6 hidden-up">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/renens-544.jpg') }}" alt="Les desserts glacés aux marchlé de renens">
-                            <figcation class="text-caption caption-top-left">Marché de Renens</figcation>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <h3>Vos invités seront ébahi avec un concept original de glaces faites devant vous !</h3>
-                        <p>Soyez témoins de la transformation de fruits frais en une réalisation artistique. Le tout garanti sans additif ni conservateur.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 hidden-down">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/renens-544.jpg') }}" alt="Les desserts glacés aux marchlé de renens">
-                            <figcation class="text-caption caption-top-left">Marché de Renens</figcation>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__figure">
-                        <figure>
-                            <img src="{{ asset('/images/minimum-544.jpg') }}" alt="Vers la jetée de la compagnie, le bar minimum au bord du lac Léman à Lausanne">
-                            <figcation class="text-caption caption-top-left">Bar Minimum</figcation>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="gallery__text">
-                        <p>La manière de concevoir un dessert devant un public créé le spectacle et captive assez facilement les personnes qui regardent le processus de création. Chaque glace se fait différemment et le glacier doit alors adapter sa façon de faire pour réaliser de beaux rouleaux appétissants.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="mt-small-50 mb-small-50 mt-100 mb-100">
-        <div class="swiper__container">
-            <div class="swiper-l">
-                <h2 class="mb-20">La galerie des glaces roulées</h2>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card-default">
-                            <img src="{{ asset('/images/glace-avocat-334.jpg') }}" alt="Glace avocat">
-                            <figcaption><p>Avocat</p></figcaption>
+    <main>
+        {{ include("partials/_social-header.html.twig") }}
+        <section>
+            <picture class="banner banner-concept">
+                <source media="(max-width:768px)" srcset="{{ asset('/images/japan-business-768.jpg') }} 768w">
+                <source media="(min-width:769px) and (max-width:1000px)" srcset="{{ asset('/images/japan-business-1000.jpg') }} 1000w">
+                <source media="(min-width:1001px) and (max-width:1920px)" srcset="{{ asset('/images/japan-business.jpg') }} 1920w">
+                <source media="(min-width:1921px)" srcset="{{ asset('/images/japan-business-2048.jpg') }}">
+                <img src="{{ asset('/images/japan-business.jpg') }}" alt="Dany Eldora geneve">
+            </picture>
+            <div class="container splash splash-over-image align-items-center align-items-center-medium-up align-items-end-medium-down">
+                <img src="{{ asset('/images/background-fruit-4-300.png') }}" alt="flying blueberry" class="background-image-over background-fruit-4">
+                <img src="{{ asset('/images/background-icercream-4-400.png') }}" alt="flying icecream blueberry" class="background-image-under background-icecream-4">
+                <div class="splash-text mt-20 mb-50 mb-small-100">
+                    <img class="home-logo" src="{{ asset('/images/logo-iceRollDelice-inline.svg') }}" alt="Web site logo iceroll delice">
+                    <h1 class="txt-l big-title">UN DESSERT ORIGINAL FAIT PAR DES GLACIERS QUI  FONT LE SHOW</h1>
+                    <div class="row-top gutter-start gutter mt-10">
+                        <div class="col-12 col-md-3">
+                            <a href="#"><button class="btn btn-primary">Voir la vidéo</button></a>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-mangue-334.jpg') }}" alt="Glace mangue">
-                            <figcaption><p>Mangue</p></figcaption>
-                        </figure>
+                </div>
+            </div>
+            <div class="clouds">
+                <img srcset="{{ asset('/images/cloud-1.png') }} 1920w, {{ asset('/images/cloud-1-1000.png') }} 1000w, {{ asset('/images/cloud-1-768.png') }} 7680w, {{ asset('/images/cloud-1-640.png') }} 640w, " src="{{ asset('/images/cloud-1.png') }}" style="--i:1;" alt="nuage">
+                <img srcset="{{ asset('/images/cloud-2.png') }} 1920w, {{ asset('/images/cloud-2-768.png') }} 7680w, {{ asset('/images/cloud-2-640.png') }} 640w, " src="{{ asset('/images/cloud-2.png') }}" style="--i:2;" alt="nuage">
+                <img srcset="{{ asset('/images/cloud-3.png') }} 1920w, {{ asset('/images/cloud-3-768.png') }} 7680w, {{ asset('/images/cloud-3-640.png') }} 640w, " src="{{ asset('/images/cloud-3.png') }}" style="--i:3;" alt="nuage">
+                <img srcset="{{ asset('/images/cloud-4.png') }} 1920w, {{ asset('/images/cloud-4-768.png') }} 7680w, {{ asset('/images/cloud-4-640.png') }} 640w, " src="{{ asset('/images/cloud-4.png') }}" style="--i:4;" alt="nuage">
+                <img srcset="{{ asset('/images/cloud-4.png') }} 1920w, {{ asset('/images/cloud-4-768.png') }} 7680w, {{ asset('/images/cloud-4-640.png') }} 640w, " src="{{ asset('/images/cloud-5.png') }}" style="--i:5;" alt="nuage">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row-stretch gutter gutter-columns">
+                    <div class="col-12 col-md-6 hidden-up">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/jeremy-1-544.jpg') }}" alt="cuisinier iceroller jeremy">
+                                <figcaption class="text-caption caption-center">Le glacier fait son spectacle pour chaque personne</figcaption>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-fraise-334.jpg') }}" alt="Glace-fraise">
-                            <figcaption><p>Fraise</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <h3>Une nouvelle cuisine, une cuisine froide</h3>
+                            <p>Ces machines icerolls permettent de réaliser des mets froids de toutes sortes. Aussi bien des entrées froides que des desserts sont réalisables. C’est une petite révolution technique dans l’art de la gastronomie. En effet, tout se congèle presque instantanément grâce à un condensateur situé sous la plaque givrante. Cette nouvelle cuisine laisse libre court à l’imagination des cuisiniers qui l’utilisent dans la recherche gastronomique afin d’élaborer de nouveaux mets raffinés.</p>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-vanille-334.jpg') }}"
-                                 alt="Glace vanille">
-                            <figcaption><p>Vanille</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6 hidden-down">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/jeremy-1-544.jpg') }}" alt="cuisinier iceroller jeremy">
+                                <figcaption class="text-caption caption-center">Le glacier fait son spectacle pour chaque personne</figcaption>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-maracuja-334.jpg') }}" alt="Géace maracuja">
-                            <figcaption><p>Fruit de la passion</p></figcaption>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/dany-1-544.jpg') }}" alt="cuisinier iceroller dany">
+                                <figcaption class="text-caption caption-center">
+                                    Un goût réalisé grâce à l’expérience et le savoir faire
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-framboise-334.jpg') }}" alt="Glace framboise">
-                            <figcaption><p>Framboise</p></figcaption>
-                        </figure>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-caramel-334.jpg') }}" alt="Glace caramel">
-                            <figcaption><p>Caramel</p></figcaption>
-                        </figure>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-chocolat-334.jpg') }}" alt="Glace chocolat">
-                            <figcaption><p>Chocolat</p></figcaption>
-                        </figure>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-pistache-334.jpg') }}"
-                                 alt="Glace pistache">
-                            <figcaption><p>Pistache</p></figcaption>
-                        </figure>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-mure-334.jpg') }}" alt="Glace mure">
-                            <figcaption><p>Mùre</p></figcaption>
-                        </figure>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure class="card-default">
-                            <img src="{{ asset('/images/glace-oreo-334.jpg') }}"
-                                 alt="Géace oreo">
-                            <figcaption><p>Oreo</p></figcaption>
-                        </figure>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure class="card-button">
-                            <a href="#">
-                                <img src="{{ asset('/images/glace-action-334.jpg') }}" alt="Glace action">
-                                <button>Voir plus</button>
-                                <figcaption><p>Voir</p></figcaption>
-                            </a>
-                        </figure>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <h3>Mais d’où ça vient ?</h3>
+                            <p>A l’origine, ce type de machine nous provient du Japon, mais les pays tropicaux ont eu plus de succès pour démocratiser le concept dans le Sud-Est asiatique; en Thaïlande notamment, car ils peuvent le faire directement dans la rue, devant les passants.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
             </div>
-            <div class="shadow-overflow"></div>
-        </div>
-    </section>
-</main>
+        </section>
+        <aside class="mt-200 mt-small-100 mb-200 mb-small-100">
+            <figure  class="gallery__banner">
+                <img srcset="{{ asset('/images/miam-festival-1000.jpg') }} 1000w" src="{{ asset('/images/miam-festival.jpg') }}" alt="Les glaces roulées au miam festival de Lausanne">
+                <figcaption class="text-caption caption-center">Miam Festival</figcaption>
+            </figure>
+        </aside>
+        <section>
+            <div class="container">
+                <div class="row-stretch gutter gutter-columns">
+                    <div class="col-12 col-md-6 hidden-up">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/renens-544.jpg') }}" alt="Les desserts glacés aux marchlé de renens">
+                                <figcation class="text-caption caption-top-left">Marché de Renens</figcation>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <h3>Vos invités seront ébahi avec un concept original de glaces faites devant vous !</h3>
+                            <p>Soyez témoins de la transformation de fruits frais en une réalisation artistique. Le tout garanti sans additif ni conservateur.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 hidden-down">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/renens-544.jpg') }}" alt="Les desserts glacés aux marchlé de renens">
+                                <figcation class="text-caption caption-top-left">Marché de Renens</figcation>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__figure">
+                            <figure>
+                                <img src="{{ asset('/images/minimum-544.jpg') }}" alt="Vers la jetée de la compagnie, le bar minimum au bord du lac Léman à Lausanne">
+                                <figcation class="text-caption caption-top-left">Bar Minimum</figcation>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="gallery__text">
+                            <p>La manière de concevoir un dessert devant un public créé le spectacle et captive assez facilement les personnes qui regardent le processus de création. Chaque glace se fait différemment et le glacier doit alors adapter sa façon de faire pour réaliser de beaux rouleaux appétissants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-small-50 mb-small-50 mt-100 mb-100">
+            <div class="swiper__container">
+                <div class="swiper-l">
+                    <h2 class="mb-20">La galerie des glaces roulées</h2>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card-default">
+                                <img src="{{ asset('/images/glace-avocat-334.jpg') }}" alt="Glace avocat">
+                                <figcaption><p>Avocat</p></figcaption>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-mangue-334.jpg') }}" alt="Glace mangue">
+                                <figcaption><p>Mangue</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-fraise-334.jpg') }}" alt="Glace-fraise">
+                                <figcaption><p>Fraise</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-vanille-334.jpg') }}"
+                                     alt="Glace vanille">
+                                <figcaption><p>Vanille</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-maracuja-334.jpg') }}" alt="Géace maracuja">
+                                <figcaption><p>Fruit de la passion</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-framboise-334.jpg') }}" alt="Glace framboise">
+                                <figcaption><p>Framboise</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-caramel-334.jpg') }}" alt="Glace caramel">
+                                <figcaption><p>Caramel</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-chocolat-334.jpg') }}" alt="Glace chocolat">
+                                <figcaption><p>Chocolat</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-pistache-334.jpg') }}"
+                                     alt="Glace pistache">
+                                <figcaption><p>Pistache</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-mure-334.jpg') }}" alt="Glace mure">
+                                <figcaption><p>Mùre</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-default">
+                                <img src="{{ asset('/images/glace-oreo-334.jpg') }}"
+                                     alt="Géace oreo">
+                                <figcaption><p>Oreo</p></figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card-button">
+                                <a href="#">
+                                    <img src="{{ asset('/images/glace-action-334.jpg') }}" alt="Glace action">
+                                    <button>Voir plus</button>
+                                    <figcaption><p>Voir</p></figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="shadow-overflow"></div>
+            </div>
+        </section>
+    </main>
+    {{ include("partials/_footer.html.twig") }}
 {% endblock %}
