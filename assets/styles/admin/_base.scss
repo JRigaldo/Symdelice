@@ -1,0 +1,39 @@
+body.admin main{
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  display: block;
+  @include clearfix;
+}
+
+.section--dashboard {
+  @include clearfix;
+  float: right;
+  width: calc(100% - 200px);
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.section--dashboard {
+  h1{
+    padding: 1rem 0;
+  }
+}
+
+@include medium-down{
+  section.section--dashboard{
+    float: none;
+    width: 100%;
+    padding: 0.3rem;
+  }
+
+  .section--dashboard {
+    h1{
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+  }
+}
+
+
+

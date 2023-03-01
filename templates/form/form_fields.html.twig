@@ -7,7 +7,7 @@
 </div>
 -->
 
-{% block field_text_row %}
+{% block text_field_row %}
     {% apply spaceless %}
         <div class="field">
             {{ form_label(form) }}
@@ -19,7 +19,7 @@
 {% endblock %}
 
 
-{% block field_text_label %}
+{% block text_field_label %}
     {% apply spaceless %}
         <label for="{{ id }}" class="field-label">
             {{ label|raw }}
@@ -27,7 +27,7 @@
     {% endapply %}
 {% endblock %}
 
-{% block field_text_widget %}
+{% block text_field_widget %}
     {% apply spaceless %}
         <input class="field-input {{ form.vars.full_name }}" id="{{ id }}" name="{{ form.vars.full_name }}" type="text" value="{{ value }}" placeholder="" {% if required is defined and required == true %} required {% endif %} {% if attr['pattern'] is defined %}pattern="{{ attr['pattern'] }}"{% endif %} {% if attr['maxlength'] is defined %}maxlength="{{attr['maxlength']}}"{%endif%}/>
     {% endapply %}

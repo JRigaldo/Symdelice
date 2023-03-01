@@ -87,6 +87,43 @@
   }
 }
 
+.btn-icon{
+  @include flex-center;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  border: 2px solid;
+  transition-duration: 0.3s;
+}
+
+
+
+.btn-icon--danger{
+  border-color: var(--danger);
+  svg path{
+    fill: var(--danger);
+  }
+  &:hover{
+    background-color: var(--danger);
+    svg path{
+      fill: var(--white);
+    }
+  }
+}
+
+.btn-icon--success{
+  border-color: var(--success);
+  svg path {
+    fill: var(--success);
+  }
+  &:hover{
+    background-color: var(--success);
+    svg path{
+      fill: var(--white);
+    }
+  }
+}
+
 .btn-max-w{
   max-width: 200px;
 }

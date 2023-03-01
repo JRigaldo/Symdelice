@@ -10,6 +10,16 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Flavor
 {
 
+    const INSTOCK = [
+        0 => 'Out of stock',
+        1 => 'In stock'
+    ];
+
+    const ISTOPPING = [
+        0 => 'Yes',
+        1 => 'No'
+    ];
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -88,6 +98,11 @@ class Flavor
         return $this;
     }
 
+    public function getInStock(): string
+    {
+        return self::INSTOCK[$this->isStock()];
+    }
+
     public function isTopping(): ?bool
     {
         return $this->topping;
@@ -98,6 +113,11 @@ class Flavor
         $this->topping = $topping;
 
         return $this;
+    }
+
+    public function getisTopping(): string
+    {
+        return self::ISTOPPING[$this->isStock()];
     }
 
     public function getCreatedAt(): ?\DateTimeImmutable

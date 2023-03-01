@@ -1,0 +1,36 @@
+.aside-nav {
+  position: fixed;
+  height: 100%;
+  background-color: var(--gray-200);
+  width: 200px;
+}
+
+.aside-nav nav {
+  top: var(--header-top);
+}
+
+.aside-nav ul li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-300);
+
+  a {
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+    transition-duration: 0.3s;
+    padding-left: 15px;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+      color: var(--theme-primary);
+    }
+  }
+}
+
+@include medium-down{
+  aside.aside-nav{
+    display: none;
+  }
+}
+
