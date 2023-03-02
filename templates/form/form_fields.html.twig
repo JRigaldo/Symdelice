@@ -6,7 +6,7 @@
     <span class="field-helper">Mettez votre code promo (chiffres)</span>
 </div>
 -->
-
+<!---------------------------------------------------- TEXT FIELD TYPE -->
 {% block text_field_row %}
     {% apply spaceless %}
         <div class="field">
@@ -32,6 +32,99 @@
         <input class="field-input {{ form.vars.full_name }}" id="{{ id }}" name="{{ form.vars.full_name }}" type="text" value="{{ value }}" placeholder="" {% if required is defined and required == true %} required {% endif %} {% if attr['pattern'] is defined %}pattern="{{ attr['pattern'] }}"{% endif %} {% if attr['maxlength'] is defined %}maxlength="{{attr['maxlength']}}"{%endif%}/>
     {% endapply %}
 {% endblock %}
+
+<!---------------------------------------------------- MONEY FIELD TYPE -->
+{% block money_field_row %}
+    {% apply spaceless %}
+        <div class="field">
+            {{ form_label(form) }}
+            {{ form_widget(form) }}
+            <span class="field-error">{{ form_errors(form) }}</span>
+            <span class="field-helper">{{ form_help(form) }}</span>
+        </div>
+    {% endapply %}
+{% endblock %}
+
+
+{% block money_field_label %}
+    {% apply spaceless %}
+        <label for="{{ id }}" class="field-label">
+            {{ label|raw }}
+        </label>
+    {% endapply %}
+{% endblock %}
+
+{% block money_field_widget %}
+    {% apply spaceless %}
+        <input class="field-input {{ form.vars.full_name }}" id="{{ id }}" name="{{ form.vars.full_name }}" type="text" value="{{ value }}" placeholder="" {% if required is defined and required == true %} required {% endif %} {% if attr['pattern'] is defined %}pattern="{{ attr['pattern'] }}"{% endif %} {% if attr['maxlength'] is defined %}maxlength="{{attr['maxlength']}}"{%endif%}/>
+    {% endapply %}
+{% endblock %}
+
+
+<!---------------------------------------------------- CHOICE FIELD TYPE -->
+{% block choice_field_row %}
+    {% apply spaceless %}
+        <fieldset class="field-select">
+            {{ form_label(form) }}
+            {{ form_widget(form) }}
+            <span class="field-error">{{ form_errors(form) }}</span>
+            <span class="field-helper">{{ form_help(form) }}</span>
+        </fieldset>
+    {% endapply %}
+{% endblock %}
+
+{% block choice_field_label %}
+    {% apply spaceless %}
+        <div class="selected {% if not value is empty %}{% endif %}"><span>{{ label|raw }}</span></div>
+    {% endapply %}
+{% endblock %}
+
+{% block choice_field_widget %}
+    {% apply spaceless %}
+        <div class="select-options">
+            {% for choice in choices %}
+                <div class="option" title="{{ choice.label }}">
+                    <input type="radio" role="option" class="radio" id="{{ id }}" name="{{ form.vars.full_name }}" value="{{ choice.data }}">
+                    <label for="{{ id }}">{{ form.vars.full_name }}</label>
+                </div>
+            {% endfor %}
+        </div>
+    {% endapply %}
+{% endblock %}
+
+<!---------------------------------------------------- CHECKBOX FIELD TYPE -->
+{% block checkbox_field_row %}
+    {% apply spaceless %}
+        <div class="field-check">
+            {{ form_widget(form) }}
+            {{ form_label(form) }}
+            <span class="field-error">{{ form_errors(form) }}</span>
+            <span class="field-helper">{{ form_help(form) }}</span>
+        </div>
+    {% endapply %}
+{% endblock %}
+
+{% block checkbox_field_label %}
+    {% apply spaceless %}
+        <label for="{{ id }}" class="field-check-label">
+            {% if label_attr is not empty %}
+                {% for attrname, attrvalue in label_attr %}
+                    <span class="field-check-{{ attrname }}">{% if label_attr[attrname] is defined %}{{ attrvalue }}{% endif %}</span>
+                {% endfor %}
+            {% else %}
+                <span class="field-check-no">Non</span>
+                <span class="field-check-yes">Oui</span>
+            {% endif %}
+        </label>
+    {% endapply %}
+{% endblock %}
+
+{% block checkbox_field_widget %}
+    {% apply spaceless %}
+        <input type="checkbox" name="{{ form.vars.full_name }}" class="field-check {{ form.vars.full_name }}" value="{{ value }}" id="{{ id }}" {% if required %}required{% endif %} {% if attr['disabled'] is defined and attr['disabled'] == true %}readonly{% endif %}>
+    {% endapply %}
+{% endblock %}
+
 
 <!--
 <div class="field-checkbox">
