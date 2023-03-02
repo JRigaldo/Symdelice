@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\FlavorRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Cocur\Slugify\Slugify;
 
 #[ORM\Entity(repositoryClass: FlavorRepository::class)]
 class Flavor
@@ -74,6 +75,11 @@ class Flavor
         return $this;
     }
 
+    public function getSlug(): string
+    {
+        return (new Slugify())->slugify($this->name);
+    }
+
     public function getPrice(): ?float
     {
         return $this->price;
@@ -84,6 +90,11 @@ class Flavor
         $this->price = $price;
 
         return $this;
+    }
+
+    public function getFormatedPrice(): string
+    {
+        return number_format($this->getPrice(), 0, '.', ' ');
     }
 
     public function isStock(): ?bool
