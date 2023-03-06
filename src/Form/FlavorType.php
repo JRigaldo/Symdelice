@@ -47,7 +47,7 @@ class FlavorType extends AbstractType
             ->add('stock',
                 CheckboxFieldType::class,
                 [
-                    'required' => true,
+                    'required' => false,
                     'label_attr' => [
                         'yes' => 'Yes',
                         'no' => 'Non'
@@ -57,7 +57,7 @@ class FlavorType extends AbstractType
             ->add('topping',
                 CheckboxFieldType::class,
                 [
-                    'required' => true,
+                    'required' => false,
                     'label_attr' => [
                         'yes' => 'Yes',
                         'no' => 'Non'

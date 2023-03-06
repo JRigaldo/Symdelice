@@ -19,8 +19,8 @@ class Flavor
     ];
 
     const ISTOPPING = [
-        0 => 'Yes',
-        1 => 'No'
+        0 => 'No',
+        1 => 'Yes'
     ];
 
     #[ORM\Id]

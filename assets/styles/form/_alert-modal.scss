@@ -1,0 +1,11 @@
+.modal{
+  position: relative;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.modal-danger{
+  background-color: var(--danger);
+  color: var(--white);
+  padding: 15px 10px;
+}

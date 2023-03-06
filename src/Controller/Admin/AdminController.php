@@ -41,7 +41,7 @@ class AdminController extends AbstractController
     public function show(FlavorRepository $repository): Response
     {
         $flavors = $repository->findAll();
-
+        //dd($flavors);
         return $this->render('admin/pages/show.html.twig', [
             'flavors' => $flavors
         ]);
@@ -58,7 +58,7 @@ class AdminController extends AbstractController
             $FlavorObject = $form->getData();
             $this->em->persist($FlavorObject);
             $this->em->flush();
-            $this->addFlash('success', 'Bien créé avec succès');
+            $this->addFlash('success', 'Successfully created');
             return $this->redirectToRoute('admin.flavor.show');
         }
 
@@ -79,7 +79,7 @@ class AdminController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
             $FlavorObject = $form->getData();
             $this->em->flush();
-            $this->addFlash('success', 'Bien créé avec succès');
+            $this->addFlash('success', 'Successfully edited');
             return $this->redirectToRoute('admin.flavor.show');
         }
 
@@ -97,12 +97,14 @@ class AdminController extends AbstractController
         ]);
     }
 
-    #[Route('/admin/flavors/edit/{id}', name: 'admin.flavor.delete', methods: ['GET'])]
-    public function delete(Flavor $flavor): Response
+    #[Route('/admin/flavors/edit/{id}', name: 'admin.flavor.delete', methods: ['GET', 'POST'])]
+    public function delete(Flavor $flavor, Request $request): Response
     {
-        $this->em->remove($flavor);
-        $this->em->flush();
-        $this->addFlash('danger', 'Your flavor has been successfully removed');
+        if($this->isCsrfTokenValid('delete' . $flavor->getId(), $request->get('_token'))){
+            $this->em->remove($flavor);
+            $this->em->flush();
+            $this->addFlash('danger', 'Successfully removed');
+        }
         return $this->redirectToRoute('admin.flavor.show');
     }
 }

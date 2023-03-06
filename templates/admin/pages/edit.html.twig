@@ -22,7 +22,6 @@
                         <div class="table-th" scope="col">Stock</div>
                         <div class="table-th" scope="col">Topping</div>
                         <div class="table-th" scope="col">Edit</div>
-                        <div class="table-th" scope="col">Delete</div>
                     </div>
                     {% for flavor in flavors %}
                         {% if flavorCurrent.id == flavor.id %}
@@ -44,18 +43,6 @@
                                                 <path id="edit_FILL0_wght400_GRAD0_opsz48"
                                                       d="M122.15,227.111h1.576L139.6,211.24l-1.576-1.576L122.15,225.535Zm22-17.412-4.586-4.586,1.5-1.5a2.163,2.163,0,0,1,3.009,0l1.576,1.576a2.163,2.163,0,0,1,0,3.009Zm-1.5,1.5-18.057,18.057H120v-4.586l18.057-18.057Zm-3.833-.752-.788-.788,1.576,1.576Z"
                                                       transform="translate(-120 -203)" fill="#fff"/>
-                                            </svg>
-                                        </button>
-                                    </a>
-                                </div>
-                                <div class="table-td">
-                                    <a href="#" class="inline-block">
-                                        <button class="btn-icon btn-icon--danger">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="23.864" height="26.847"
-                                                 viewBox="0 0 23.864 26.847">
-                                                <path id="delete_FILL0_wght400_GRAD0_opsz48"
-                                                      d="M163.766,242.847a2.244,2.244,0,0,1-2.237-2.237V219.356H160v-2.237h7.01V216h9.844v1.119h7.01v2.237h-1.529V240.61a2.294,2.294,0,0,1-2.237,2.237ZM180.1,219.356H163.766V240.61H180.1ZM167.719,237.4h2.237V222.525h-2.237Zm6.19,0h2.237V222.525h-2.237Zm-10.142-18.047v0Z"
-                                                      transform="translate(-160 -216)" fill="#fff"/>
                                             </svg>
                                         </button>
                                     </a>

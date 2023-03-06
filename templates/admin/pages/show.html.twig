@@ -63,13 +63,15 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ path('admin.flavor.delete', {id: flavor.id}) }}" class="inline-block" onclick="confirm('Do you really want do remove this falvor ?')">
-                                    <button class="btn-icon btn-icon--danger">
+                                <form method="post" action="{{ path('admin.flavor.delete', { id: flavor.id }) }}" class="inline-block">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ flavor.id) }}">
+                                    <button type="submit" class="btn-icon btn-icon--danger" onsubmit="return confirm('Do you really want do remove this falvor ?');">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="23.864" height="26.847" viewBox="0 0 23.864 26.847">
                                             <path id="delete_FILL0_wght400_GRAD0_opsz48" d="M163.766,242.847a2.244,2.244,0,0,1-2.237-2.237V219.356H160v-2.237h7.01V216h9.844v1.119h7.01v2.237h-1.529V240.61a2.294,2.294,0,0,1-2.237,2.237ZM180.1,219.356H163.766V240.61H180.1ZM167.719,237.4h2.237V222.525h-2.237Zm6.19,0h2.237V222.525h-2.237Zm-10.142-18.047v0Z" transform="translate(-160 -216)" fill="#fff"/>
                                         </svg>
                                     </button>
-                                </a>
+                                </form>
                             </td>
                         </tr>
                     {% endfor %}

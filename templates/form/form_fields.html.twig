@@ -98,7 +98,7 @@
 
 {% block checkbox_field_label %}
     {% apply spaceless %}
-        <label for="{{ id }}" class="field-check-label">
+        <label for="{{ value }}" class="field-check-label">
             {% if label_attr is not empty %}
                 {% for attrname, attrvalue in label_attr %}
                     <span class="field-check-{{ attrname }}">{% if label_attr[attrname] is defined %}{{ attrvalue }}{% endif %}</span>
@@ -113,7 +113,7 @@
 
 {% block checkbox_field_widget %}
     {% apply spaceless %}
-        <input type="checkbox" name="{{ form.vars.full_name }}" class="field-check {{ form.vars.full_name }}" value="{{ value }}" id="{{ id }}" {% if attr['disabled'] is defined and attr['disabled'] == true %}readonly{% endif %}>
+        <input type="checkbox" name="{{ value }}" class="field-check {{ form.vars.full_name }}" value="{{ value }}" id="{{ id }}" {% if required %}required{% endif %} {% if attr['disabled'] is defined and attr['disabled'] == true %}readonly{% endif %}>
     {% endapply %}
 {% endblock %}
 
