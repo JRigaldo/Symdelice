@@ -11,6 +11,23 @@
             {% include "admin/partials/_aside.html.twig" %}
         {% endblock %}
         <section class="section--dashboard">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            <div class="add-new">
+                <a href="{{ path('admin.flavor.create') }}" class="inline-block">
+                    <button class="btn-icon btn-icon--success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16.67" height="16.67" viewBox="0 0 16.67 16.67">
+                            <path id="add_FILL0_wght400_GRAD0_opsz48" d="M207.442,312.67v-7.442H200v-1.786h7.442V296h1.786v7.442h7.442v1.786h-7.442v7.442Z" transform="translate(-200 -296)" fill="#fff"/>
+                        </svg>
+                    </button>
+                    <span>Add new field</span>
+                </a>
+            </div>
             {% if not flavors is same as([]) %}
                 <table class="table">
                     <thead>
@@ -46,7 +63,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="#" class="inline-block">
+                                <a href="{{ path('admin.flavor.delete', {id: flavor.id}) }}" class="inline-block" onclick="confirm('Do you really want do remove this falvor ?')">
                                     <button class="btn-icon btn-icon--danger">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="23.864" height="26.847" viewBox="0 0 23.864 26.847">
                                             <path id="delete_FILL0_wght400_GRAD0_opsz48" d="M163.766,242.847a2.244,2.244,0,0,1-2.237-2.237V219.356H160v-2.237h7.01V216h9.844v1.119h7.01v2.237h-1.529V240.61a2.294,2.294,0,0,1-2.237,2.237ZM180.1,219.356H163.766V240.61H180.1ZM167.719,237.4h2.237V222.525h-2.237Zm6.19,0h2.237V222.525h-2.237Zm-10.142-18.047v0Z" transform="translate(-160 -216)" fill="#fff"/>

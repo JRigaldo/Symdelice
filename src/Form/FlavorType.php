@@ -35,7 +35,7 @@ class FlavorType extends AbstractType
             ->add('price',
                 MoneyFieldType::class,
                 [
-                    'label' => 'Prix',
+                    'label' => 'Prix CHF',
                     'mapped' => true,
                     'required' => true,
                     'constraints' => [

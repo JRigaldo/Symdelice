@@ -1,11 +1,3 @@
-<!--
-<div class="field">
-    <label for="code" class="field-label">Code</label>
-    <input id="code" type="text" class="field-input">
-    <span class="field-error">Une erreur s'est produite</span>
-    <span class="field-helper">Mettez votre code promo (chiffres)</span>
-</div>
--->
 <!---------------------------------------------------- TEXT FIELD TYPE -->
 {% block text_field_row %}
     {% apply spaceless %}
@@ -121,12 +113,19 @@
 
 {% block checkbox_field_widget %}
     {% apply spaceless %}
-        <input type="checkbox" name="{{ form.vars.full_name }}" class="field-check {{ form.vars.full_name }}" value="{{ value }}" id="{{ id }}" {% if required %}required{% endif %} {% if attr['disabled'] is defined and attr['disabled'] == true %}readonly{% endif %}>
+        <input type="checkbox" name="{{ form.vars.full_name }}" class="field-check {{ form.vars.full_name }}" value="{{ value }}" id="{{ id }}" {% if attr['disabled'] is defined and attr['disabled'] == true %}readonly{% endif %}>
     {% endapply %}
 {% endblock %}
 
 
 <!--
+<div class="field">
+    <label for="code" class="field-label">Code</label>
+    <input id="code" type="text" class="field-input">
+    <span class="field-error">Une erreur s'est produite</span>
+    <span class="field-helper">Mettez votre code promo (chiffres)</span>
+</div>
+
 <div class="field-checkbox">
     <input type="checkbox" id="strawberry" name="strawberry">
     <label for="strawberry">

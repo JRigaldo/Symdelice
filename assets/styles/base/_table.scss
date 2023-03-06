@@ -1,38 +1,32 @@
-@media only screen and (max-width: 660px){
-  table thead tr {
-    display: none;
-  }
+.table{
+  display: table;
+}
 
-  table tbody{
-    @include clearfix;
-  }
+div.table > :not(caption) > * > *{
+  padding: 5px;
+}
 
-  table tbody tr,{
-    width: 50%;
-    float: left;
-    border-left: 1px solid var(--gray-200);
-    &:first-child{
-      border-left: none;
-    }
-  }
+.table .table-tr{
+  display: table-row;
+}
 
-  table tbody th,
-  table tbody td,
-  table tbody  td:not([align]),
-  table tbody  th:not([align]){
-    width: 100%;
-  }
+.table form.table-tr{
+  background-color: var(--add-new);
+}
 
-  table tbody tr,
-  table tbody th,
-  table tbody td,
-  table tbody  td:not([align]),
-  table tbody  th:not([align]){
-    display: block;
-    text-align: center;
-  }
+.table .table-td,
+.table .table-th{
+  display: table-cell;
+  padding: 5px;
+  border-bottom: solid 1px #000;
+}
 
-  table tbody tr th.th-index{
-    background-color: var(--gray-300);
-  }
+.table form.table-tr .table-td,
+.table form.table-tr .table-th{
+  padding: 0;
+}
+
+.table form.table-tr .table-td .field{
+  height: auto;
+  margin: 0;
 }

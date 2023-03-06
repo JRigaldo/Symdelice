@@ -12,82 +12,58 @@
         {% endblock %}
         <section class="section--dashboard">
             {% if not flavors is same as([]) %}
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">ID</th>
-                        <th scope="col">Image</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Stock</th>
-                        <th scope="col">Topping</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                <div class="table">
+                    <div class="table-tr">
+                        <div class="table-th" scope="col">#</div>
+                        <div class="table-th" scope="col">ID</div>
+                        <div class="table-th" scope="col">Image</div>
+                        <div class="table-th" scope="col">Name</div>
+                        <div class="table-th" scope="col">Price</div>
+                        <div class="table-th" scope="col">Stock</div>
+                        <div class="table-th" scope="col">Topping</div>
+                        <div class="table-th" scope="col">Edit</div>
+                        <div class="table-th" scope="col">Delete</div>
+                    </div>
                     {% for flavor in flavors %}
                         {% if flavorCurrent.id == flavor.id %}
-                        <tr>
-                            <th scope="row">{{ loop.index }}</th>
-                            <td>{{ flavor.id }}</td>
-                            <td>image</td>
-                            <td>{{ flavor.name }}</td>
-                            <td>{{ flavor.formatedPrice }} chf</td>
-                            <td>{{ flavor.inStock }}</td>
-                            <td>{{ flavor.getisTopping }}</td>
-                            <td>
-                                <a href="{{ path('admin.flavor.show') }}" class="inline-block">
-                                    <button class="btn-icon btn-icon--success">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25.149" height="18.156" viewBox="0 0 25.149 18.156">
-                                            <path id="done_FILL0_wght400_GRAD0_opsz48" d="M162.653,358.156,154,349.5l1.661-1.661,6.992,6.992L177.488,340l1.661,1.661Z" transform="translate(-154 -340)" fill="#fff"/>
-                                        </svg>
-                                    </button>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#" class="inline-block">
-                                    <button class="btn-icon btn-icon--danger">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="23.864" height="26.847" viewBox="0 0 23.864 26.847">
-                                            <path id="delete_FILL0_wght400_GRAD0_opsz48" d="M163.766,242.847a2.244,2.244,0,0,1-2.237-2.237V219.356H160v-2.237h7.01V216h9.844v1.119h7.01v2.237h-1.529V240.61a2.294,2.294,0,0,1-2.237,2.237ZM180.1,219.356H163.766V240.61H180.1ZM167.719,237.4h2.237V222.525h-2.237Zm6.19,0h2.237V222.525h-2.237Zm-10.142-18.047v0Z" transform="translate(-160 -216)" fill="#fff"/>
-                                        </svg>
-                                    </button>
-                                </a>
-                            </td>
-                        </tr>
+                            {{ include('admin/form/_form.html.twig', { form: form, button: 'Editer' }) }}
                         {% else %}
-                            <tr>
-                                <th scope="row">{{ loop.index }}</th>
-                                <td>{{ flavor.id }}</td>
-                                <td>image</td>
-                                <td>{{ flavor.name }}</td>
-                                <td>{{ flavor.formatedPrice }} chf</td>
-                                <td>{{ flavor.inStock }}</td>
-                                <td>{{ flavor.getisTopping }}</td>
-                                <td>
-                                    <a href="{{ path('admin.flavor.show') }}" class="inline-block">
+                            <div class="table-tr">
+                                <div class="table-th" scope="row">{{ loop.index }}</div>
+                                <div class="table-td">{{ flavor.id }}</div>
+                                <div class="table-td">image</div>
+                                <div class="table-td">{{ flavor.name }}</div>
+                                <div class="table-td">{{ flavor.formatedPrice }} chf</div>
+                                <div class="table-td">{{ flavor.inStock }}</div>
+                                <div class="table-td">{{ flavor.getisTopping }}</div>
+                                <div class="table-td">
+                                    <a href="{{ path('admin.flavor.edit', {id: flavor.id, slug: flavor.slug}) }}" class="inline-block">
                                         <button class="btn-icon btn-icon--success">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="26.261" height="26.261" viewBox="0 0 26.261 26.261">
-                                                <path id="edit_FILL0_wght400_GRAD0_opsz48" d="M122.15,227.111h1.576L139.6,211.24l-1.576-1.576L122.15,225.535Zm22-17.412-4.586-4.586,1.5-1.5a2.163,2.163,0,0,1,3.009,0l1.576,1.576a2.163,2.163,0,0,1,0,3.009Zm-1.5,1.5-18.057,18.057H120v-4.586l18.057-18.057Zm-3.833-.752-.788-.788,1.576,1.576Z" transform="translate(-120 -203)" fill="#fff"/>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26.261" height="26.261"
+                                                 viewBox="0 0 26.261 26.261">
+                                                <path id="edit_FILL0_wght400_GRAD0_opsz48"
+                                                      d="M122.15,227.111h1.576L139.6,211.24l-1.576-1.576L122.15,225.535Zm22-17.412-4.586-4.586,1.5-1.5a2.163,2.163,0,0,1,3.009,0l1.576,1.576a2.163,2.163,0,0,1,0,3.009Zm-1.5,1.5-18.057,18.057H120v-4.586l18.057-18.057Zm-3.833-.752-.788-.788,1.576,1.576Z"
+                                                      transform="translate(-120 -203)" fill="#fff"/>
                                             </svg>
                                         </button>
                                     </a>
-                                </td>
-                                <td>
+                                </div>
+                                <div class="table-td">
                                     <a href="#" class="inline-block">
                                         <button class="btn-icon btn-icon--danger">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="23.864" height="26.847" viewBox="0 0 23.864 26.847">
-                                                <path id="delete_FILL0_wght400_GRAD0_opsz48" d="M163.766,242.847a2.244,2.244,0,0,1-2.237-2.237V219.356H160v-2.237h7.01V216h9.844v1.119h7.01v2.237h-1.529V240.61a2.294,2.294,0,0,1-2.237,2.237ZM180.1,219.356H163.766V240.61H180.1ZM167.719,237.4h2.237V222.525h-2.237Zm6.19,0h2.237V222.525h-2.237Zm-10.142-18.047v0Z" transform="translate(-160 -216)" fill="#fff"/>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="23.864" height="26.847"
+                                                 viewBox="0 0 23.864 26.847">
+                                                <path id="delete_FILL0_wght400_GRAD0_opsz48"
+                                                      d="M163.766,242.847a2.244,2.244,0,0,1-2.237-2.237V219.356H160v-2.237h7.01V216h9.844v1.119h7.01v2.237h-1.529V240.61a2.294,2.294,0,0,1-2.237,2.237ZM180.1,219.356H163.766V240.61H180.1ZM167.719,237.4h2.237V222.525h-2.237Zm6.19,0h2.237V222.525h-2.237Zm-10.142-18.047v0Z"
+                                                      transform="translate(-160 -216)" fill="#fff"/>
                                             </svg>
                                         </button>
                                     </a>
-                                </td>
-                            </tr>
+                                </div>
+                            </div>
                         {% endif %}
                     {% endfor %}
-                    </tbody>
-                </table>
+                </div>
             {% else %}
                 <h3>La table de parfum est vide !</h3>
             {% endif %}

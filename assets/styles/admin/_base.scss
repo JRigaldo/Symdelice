@@ -35,5 +35,62 @@ body.admin main{
   }
 }
 
+.add-new h5{
+  display: inline-block;
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: var(--bold);
+  text-align: center;
+  width: 100%;
+}
+
+.add-new .col .center {
+  padding: 3px;
+  &:first-child{
+    display: block;
+    height: 30px;
+    background-color: var(--gray-dark);
+  }
+  &:nth-child(2){
+    height: calc(100% - 30px);
+    @include flex-center;
+  }
+}
+
+.add-new{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer;
+  span{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-width: var(--bold);
+    color: var(--gray-dark);
+    transition-duration: .3s;
+  }
+  svg{
+    position: relative;
+    right: 1px;
+  }
+
+  button{
+    display: inline-block;
+  }
+
+  &:hover a span{
+    color: var(--success);
+  }
+  &:hover a .btn-icon--success {
+    background-color: var(--success);
+    svg path {
+      fill: var(--white);
+    }
+  }
+}
+
 
 
