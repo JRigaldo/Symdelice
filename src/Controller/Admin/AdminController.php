@@ -41,7 +41,6 @@ class AdminController extends AbstractController
     public function show(FlavorRepository $repository): Response
     {
         $flavors = $repository->findAll();
-        //dd($flavors);
         return $this->render('admin/pages/show.html.twig', [
             'flavors' => $flavors
         ]);

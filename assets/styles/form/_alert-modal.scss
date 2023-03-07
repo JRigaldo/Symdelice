@@ -2,10 +2,35 @@
   position: relative;
   border-radius: 5px;
   font-size: 1.2rem;
+  padding: 15px 10px;
+  color: var(--white);
+}
+
+.modal-success{
+  background-color: var(--success);
 }
 
 .modal-danger{
   background-color: var(--danger);
+}
+
+.alert {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px;
   color: var(--white);
+  border-radius: 5px;
+  font-size: 1.2rem;
   padding: 15px 10px;
+}
+
+.alert-success{
+  background-color: var(--success);
+}
+
+.alert-danger{
+  background-color: var(--danger)
 }

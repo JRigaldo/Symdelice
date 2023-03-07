@@ -4,9 +4,9 @@
         <div class="field">
             {{ form_label(form) }}
             {{ form_widget(form) }}
-            <span class="field-error">{{ form_errors(form) }}</span>
-            <span class="field-helper">{{ form_help(form) }}</span>
         </div>
+        <span class="field-error">{{ form_errors(form) }}</span>
+        <span class="field-helper">{{ form_help(form) }}</span>
     {% endapply %}
 {% endblock %}
 
@@ -31,9 +31,9 @@
         <div class="field">
             {{ form_label(form) }}
             {{ form_widget(form) }}
-            <span class="field-error">{{ form_errors(form) }}</span>
-            <span class="field-helper">{{ form_help(form) }}</span>
         </div>
+        <span class="field-error">{{ form_errors(form) }}</span>
+        <span class="field-helper">{{ form_help(form) }}</span>
     {% endapply %}
 {% endblock %}
 
@@ -59,9 +59,9 @@
         <fieldset class="field-select">
             {{ form_label(form) }}
             {{ form_widget(form) }}
-            <span class="field-error">{{ form_errors(form) }}</span>
-            <span class="field-helper">{{ form_help(form) }}</span>
         </fieldset>
+        <span class="field-error">{{ form_errors(form) }}</span>
+        <span class="field-helper">{{ form_help(form) }}</span>
     {% endapply %}
 {% endblock %}
 
@@ -90,9 +90,9 @@
         <div class="field-check">
             {{ form_widget(form) }}
             {{ form_label(form) }}
-            <span class="field-error">{{ form_errors(form) }}</span>
-            <span class="field-helper">{{ form_help(form) }}</span>
         </div>
+        <span class="field-error">{{ form_errors(form) }}</span>
+        <span class="field-helper">{{ form_help(form) }}</span>
     {% endapply %}
 {% endblock %}
 
@@ -114,6 +114,93 @@
 {% block checkbox_field_widget %}
     {% apply spaceless %}
         <input type="checkbox" name="{{ value }}" class="field-check {{ form.vars.full_name }}" value="{{ value }}" id="{{ id }}" {% if required %}required{% endif %} {% if attr['disabled'] is defined and attr['disabled'] == true %}readonly{% endif %}>
+    {% endapply %}
+{% endblock %}
+
+<!---------------------------------------------------- Email FIELD TYPE -->
+{% block email_field_row %}
+    {% apply spaceless %}
+        <div class="field">
+            {{ form_label(form) }}
+            {{ form_widget(form) }}
+        </div>
+        <span class="field-error">{{ form_errors(form) }}</span>
+        <span class="field-helper">{{ form_help(form) }}</span>
+    {% endapply %}
+{% endblock %}
+
+
+{% block email_field_label %}
+    {% apply spaceless %}
+        <label for="{{ id }}" class="field-label">
+            {{ label|raw }}
+        </label>
+    {% endapply %}
+{% endblock %}
+
+{% block email_field_widget %}
+    {% apply spaceless %}
+        <input class="field-input {{ form.vars.full_name }}" id="{{ id }}" name="{{ form.vars.full_name }}" type="email" value="{{ value }}" placeholder="" {% if required is defined and required == true %} required {% endif %} {% if attr['pattern'] is defined %}pattern="{{ attr['pattern'] }}"{% endif %} {% if attr['maxlength'] is defined %}maxlength="{{attr['maxlength']}}"{%endif%}/>
+    {% endapply %}
+{% endblock %}
+
+<!---------------------------------------------------- Repeated FIELD TYPE -->
+{% block repeated_field_row %}
+    {% apply spaceless %}
+        <div class="field">
+            {{ form_label(form.first) }}
+            {{ form_widget(form.first) }}
+        </div>
+        <span class="field-error">{{ form_errors(form.first) }}</span>
+        <span class="field-helper">{{ form_help(form.first) }}</span>
+        <div class="field mt-25">
+            {{ form_label(form.second) }}
+            {{ form_widget(form.second) }}
+        </div>
+        <span class="field-error">{{ form_errors(form.second) }}</span>
+        <span class="field-helper">{{ form_help(form.second) }}</span>
+    {% endapply %}
+{% endblock %}
+
+
+{% block repeated_field_label %}
+    {% apply spaceless %}
+        <label for="{{ id }}" class="field-label">
+            {{ label|raw }}
+        </label>
+    {% endapply %}
+{% endblock %}
+
+{% block repeated_field_widget %}
+    {% apply spaceless %}
+        <input class="field-input {{ form.vars.full_name }}" id="{{ id }}" name="{{ form.vars.full_name }}" type="password" value="{{ value|join }}" placeholder="" {% if required is defined and required == true %} required {% endif %} {% if attr['pattern'] is defined %}pattern="{{ attr['pattern'] }}"{% endif %} {% if attr['maxlength'] is defined %}maxlength="{{attr['maxlength']}}"{%endif%}/>
+    {% endapply %}
+{% endblock %}
+
+<!---------------------------------------------------- Password FIELD TYPE -->
+{% block password_field_row %}
+    {% apply spaceless %}
+        <div class="field">
+            {{ form_label(form) }}
+            {{ form_widget(form) }}
+        </div>
+        <span class="field-error">{{ form_errors(form) }}</span>
+        <span class="field-helper">{{ form_help(form) }}</span>
+    {% endapply %}
+{% endblock %}
+
+
+{% block password_field_label %}
+    {% apply spaceless %}
+        <label for="{{ id }}" class="field-label">
+            {{ label|raw }}
+        </label>
+    {% endapply %}
+{% endblock %}
+
+{% block password_field_widget %}
+    {% apply spaceless %}
+        <input class="field-input {{ form.vars.full_name }}" id="{{ id }}" name="{{ form.vars.full_name }}" type="password" value="{{ value }}" placeholder="" {% if required is defined and required == true %} required {% endif %} {% if attr['pattern'] is defined %}pattern="{{ attr['pattern'] }}"{% endif %} {% if attr['maxlength'] is defined %}maxlength="{{attr['maxlength']}}"{%endif%}/>
     {% endapply %}
 {% endblock %}
 

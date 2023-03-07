@@ -35,6 +35,7 @@ Encore
         './assets/js/animation.js',
         './assets/js/field-check.js',
         './assets/js/select.js',
+        './assets/js/modal.js',
     ])
 
     .addEntry('js/admin', [
@@ -43,6 +44,7 @@ Encore
         './assets/js/form.js',
         './assets/js/field-check.js',
         './assets/js/select.js',
+        './assets/js/modal.js',
     ])
 
     // Add CSS site stylesheets

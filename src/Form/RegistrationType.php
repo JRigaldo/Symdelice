@@ -3,11 +3,17 @@
 namespace App\Form;
 
 use App\Entity\User;
-use App\Form\Type\TextFieldType;
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Form\AbstractType;
+use App\Form\Type\EmailFieldType;
+use App\Form\Type\TextFieldType;
+use App\Form\Type\RepeatedFieldType;
+use App\Form\Type\PasswordFieldType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints as Assert;
+
 
 class RegistrationType extends AbstractType
 {
@@ -33,7 +39,7 @@ class RegistrationType extends AbstractType
                 [
                     'label' => 'Pseudo (facultatif)',
                     'mapped' => true,
-                    'required' => true,
+                    'required' => false,
                     'attr' => [
                         'minlength' => '2',
                         'maxlength' => '50',
@@ -59,7 +65,24 @@ class RegistrationType extends AbstractType
                     ]
 
                 ])
-            ->add('password')
+            ->add('plainPassword', RepeatedFieldType::class, [
+                    'type' => PasswordFieldType::class,
+                    'invalid_message' => 'Les mots de passe ne correspondent pas',
+                    'options' => ['attr' => ['class' => 'password-field']],
+                    'required' => true,
+                    'mapped' => true,
+                    'first_options' => [
+                        'label' => 'Mot de passe',
+                    ],
+                    'second_options' => [
+                        'label' => 'Confirmation de mot de passe',
+                    ]
+                ])
+            ->add('submit', SubmitType::class, [
+                'attr' => [
+                    'class' => 'btn btn-primary'
+                ]
+            ])
         ;
     }
 

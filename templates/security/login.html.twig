@@ -9,6 +9,13 @@
     <div class="background-gradient-2"></div>
     <section>
         <div class="container">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
             <form action="{{ path('security.login') }}" class="form-container mb-100" method="post">
                 <div class="form">
                     <div class="row-top gutter">
