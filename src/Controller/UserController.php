@@ -43,8 +43,8 @@ class UserController extends AbstractController
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             if($passwordHasher->isPasswordValid($user, $form->getData()->getPlainPassword())){
-                $user = $form->getData();
-                $this->em->persist($user);
+                $userData = $form->getData();
+                $this->em->persist($userData);
                 $this->em->flush();
 
                 $this->addFlash('success', 'Les informations de votre compte ont bien été modifiées');

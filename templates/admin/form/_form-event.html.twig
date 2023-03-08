@@ -1,0 +1,44 @@
+{{ form_start(form, {'attr': {'class': 'table-tr'}}) }}
+<div class="table-td" scope="row">
+    {% if loop.index is defined %}
+        {{ loop.index }}
+    {% else %}
+        N°
+    {% endif %}
+</div>
+<div class="table-td">
+    {% if flavor.id is defined and flavor.id is not empty %}
+        {{ flavor.id }}
+    {% else %}
+        #
+    {% endif %}
+</div>
+<div class="table-td">{{ form_row(form.address) }}</div>
+<div class="table-td">{{ form_row(form.street_number) }}</div>
+<div class="table-td">{{ form_row(form.city) }}</div>
+<div class="table-td">{{ form_row(form.state) }}</div>
+<div class="table-td">{{ form_row(form.eventName) }}</div>
+<div class="table-td">{{ form_row(form.guestsNumber) }}</div>
+<div class="table-td">{{ form_row(form.advanceTime) }}</div>
+<div class="table-td">{{ form_row(form.eventDate) }}</div>
+<div class="table-td">{{ form_row(form.createdAt) }}</div>
+<div class="table-td">{{ form_row(form.availableTimeForEvent) }}</div>
+<div class="table-td">{{ form_row(form.eventTime) }}</div>
+<div class="table-td">{{ form_row(form.eventType) }}</div>
+<div class="table-td">{{ form_row(form.lactoseIntolerant) }}</div>
+<div class="table-td">{{ form_row(form.nearbyPowerSupply) }}</div>
+<div class="table-td">{{ form_row(form.shortWalkingDistance) }}</div>
+<div class="table-td">{{ form_row(form.eventKind) }}</div>
+<div class="table-td">
+    <a href="{{ path('event.show') }}" class="inline-block">
+        <button type="submit" class="btn-icon btn-icon--success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25.149" height="18.156"
+                 viewBox="0 0 25.149 18.156">
+                <path id="done_FILL0_wght400_GRAD0_opsz48"
+                      d="M162.653,358.156,154,349.5l1.661-1.661,6.992,6.992L177.488,340l1.661,1.661Z"
+                      transform="translate(-154 -340)" fill="#fff"/>
+            </svg>
+        </button>
+    </a>
+</div>
+{{ form_end(form) }}

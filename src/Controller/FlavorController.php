@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class FlavorController extends AbstractController
 {
 
-    public function __construct(FlavorRepository $repository,EntityManagerInterface $entityManager)
+    public function __construct(FlavorRepository $repository, EntityManagerInterface $entityManager)
     {
         $this->repo = $repository;
         $this->em = $entityManager;
@@ -26,7 +26,7 @@ class FlavorController extends AbstractController
      * @param FlavorRepository $repository
      * @return Response
      */
-    #[Route('/liste-des-parfums', name: 'flavor.show', methods: ['GET'])]
+    #[Route('/parfums', name: 'flavor.show', methods: ['GET'])]
     public function show(FlavorRepository $repository): Response
     {
         $flavors = $repository->findAll();
@@ -39,12 +39,12 @@ class FlavorController extends AbstractController
     public function create(Request $request): Response
     {
         $flavors = $this->repo->findAll();
-        $FlavorObject = new Flavor();
-        $form = $this->createForm(FlavorType::class, $FlavorObject);
+        $flavorObject = new Flavor();
+        $form = $this->createForm(FlavorType::class, $flavorObject);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $FlavorObject = $form->getData();
-            $this->em->persist($FlavorObject);
+            $flavorData = $form->getData();
+            $this->em->persist($flavorData);
             $this->em->flush();
             $this->addFlash('success', 'Successfully created');
             return $this->redirectToRoute('flavor.show');
@@ -57,7 +57,7 @@ class FlavorController extends AbstractController
     }
 
     #[Route('/parfum/editer/{slug}-{id}', name: 'flavor.edit', methods: ['GET','POST'], requirements: ['slug' => '[a-z0-9\-]*'])]
-    public function edit(Request $request, Flavor $flavor, string $slug, int $id): Response
+    public function edit(Request $request, Flavor $flavor, string $slug): Response
     {
         $flavors = $this->repo->findAll();
 
@@ -65,8 +65,8 @@ class FlavorController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $flavor = $form->getData();
-            $this->em->persist($flavor);
+            $flavorData = $form->getData();
+            $this->em->persist($flavorData);
             $this->em->flush();
 
             $this->addFlash('success', 'Successfully edited');

@@ -1,0 +1,111 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Admin index{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {% include "admin/partials/_header.html.twig" %}
+    {% endblock %}
+    <main>
+        {% block aside %}
+            {% include "admin/partials/_aside.html.twig" %}
+        {% endblock %}
+        <section class="section--dashboard">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }}">
+                        {{ message }}
+                        <div class="alert-cross action-close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16.363" height="16.363" viewBox="0 0 16.363 16.363">
+                                <path id="close_FILL0_wght400_GRAD0_opsz48_1_" data-name="close_FILL0_wght400_GRAD0_opsz48 (1)" d="M208.259,319.363,207,318.1l6.923-6.923L207,304.259,208.259,303l6.923,6.923L222.1,303l1.259,1.259-6.923,6.923,6.923,6.923-1.259,1.259-6.923-6.923Z" transform="translate(-207 -303)" fill="#fff"/>
+                            </svg>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            <div class="add-new">
+                <a href="{{ path('event.create') }}" class="inline-block">
+                    <button class="btn-icon btn-icon--success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16.67" height="16.67" viewBox="0 0 16.67 16.67">
+                            <path id="add_FILL0_wght400_GRAD0_opsz48" d="M207.442,312.67v-7.442H200v-1.786h7.442V296h1.786v7.442h7.442v1.786h-7.442v7.442Z" transform="translate(-200 -296)" fill="#fff"/>
+                        </svg>
+                    </button>
+                    <span>Add new field</span>
+                </a>
+            </div>
+            {% if not events is same as([]) %}
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Street number</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Postcode</th>
+                        <th scope="col">state</th>
+                        <th scope="col">Event name</th>
+                        <th scope="col">Guests number</th>
+                        <th scope="col">Advance time</th>
+                        <th scope="col">Event date</th>
+                        <th scope="col">Created At</th>
+                        <th scope="col">Available time for event</th>
+                        <th scope="col">Event time</th>
+                        <th scope="col">Event type</th>
+                        <th scope="col">Lactose intolerant</th>
+                        <th scope="col">Nearby power supply</th>
+                        <th scope="col">Short walking distance</th>
+                        <th scope="col">Event kind</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for event in events %}
+                        <tr>
+                            <th scope="row">{{ loop.index }}</th>
+                            <td>{{ event.id }}</td>
+                            <td>{{ event.address }}</td>
+                            <td>{{ event.streetNumber }}</td>
+                            <td>{{ event.city }}</td>
+                            <td>{{ event.state }}</td>
+                            <td>{{ event.eventName }}</td>
+                            <td>{{ event.guestsNumber }}</td>
+                            <td>{{ event.advanceTime }}</td>
+                            <td>{{ event.eventDate|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ event.createdAt|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ event.availableTimeForEvent }}</td>
+                            <td>{{ event.eventTime|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ event.eventType }}</td>
+                            <td>{{ event.lactoseIntolerant }}</td>
+                            <td>{{ event.nearbyPowerSupply }}</td>
+                            <td>{{ event.shortWalkingDistance }}</td>
+                            <td>{{ event.eventKind }}</td>
+                            <td>
+                                <a href="{{ path('event.edit', {id: event.id, slug: event.slug}) }}" class="inline-block">
+                                    <button class="btn-icon btn-icon--success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26.261" height="26.261" viewBox="0 0 26.261 26.261">
+                                            <path id="edit_FILL0_wght400_GRAD0_opsz48" d="M122.15,227.111h1.576L139.6,211.24l-1.576-1.576L122.15,225.535Zm22-17.412-4.586-4.586,1.5-1.5a2.163,2.163,0,0,1,3.009,0l1.576,1.576a2.163,2.163,0,0,1,0,3.009Zm-1.5,1.5-18.057,18.057H120v-4.586l18.057-18.057Zm-3.833-.752-.788-.788,1.576,1.576Z" transform="translate(-120 -203)" fill="#fff"/>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </td>
+                            <td>
+                                <form method="post" action="{{ path('event.delete', { id: event.id }) }}" class="inline-block">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ event.id) }}">
+                                    <button type="submit" class="btn-icon btn-icon--danger" onsubmit="return confirm('Do you really want do remove this falvor ?');">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="23.864" height="26.847" viewBox="0 0 23.864 26.847">
+                                            <path id="delete_FILL0_wght400_GRAD0_opsz48" d="M163.766,242.847a2.244,2.244,0,0,1-2.237-2.237V219.356H160v-2.237h7.01V216h9.844v1.119h7.01v2.237h-1.529V240.61a2.294,2.294,0,0,1-2.237,2.237ZM180.1,219.356H163.766V240.61H180.1ZM167.719,237.4h2.237V222.525h-2.237Zm6.19,0h2.237V222.525h-2.237Zm-10.142-18.047v0Z" transform="translate(-160 -216)" fill="#fff"/>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <h3>La table des events est vide !</h3>
+            {% endif %}
+        </section>
+    </main>
+{% endblock %}

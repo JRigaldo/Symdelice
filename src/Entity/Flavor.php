@@ -33,8 +33,8 @@ class Flavor
     #[Assert\Length(
     min: 2,
     max: 50,
-    minMessage: 'Your first name must be at least {{ limit }} characters long',
-    maxMessage: 'Your first name cannot be longer than {{ limit }} characters',
+    minMessage: 'Votre glace doit contenir au moins {{ limit }} caractères',
+    maxMessage: 'Votr glace ne peut pas contenir plus de {{ limit }} caractères',
     )]
     private ?string $name = null;
 

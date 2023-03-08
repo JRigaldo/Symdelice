@@ -63,11 +63,11 @@ class LoginController extends AbstractController
 
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $user = $form->getData();
+            $userData = $form->getData();
 
             $this->addFlash('success', 'Vous êtes bien enregistrés');
 
-            $this->em->persist($user);
+            $this->em->persist($userData);
             $this->em->flush();
 
             return $this->redirectToRoute('security.login');
