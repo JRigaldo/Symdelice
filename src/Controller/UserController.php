@@ -63,18 +63,21 @@ class UserController extends AbstractController
     #[Route('/utilisateur/edition-du-mot-de-passe/{id}', name: 'admin.edit.password', methods: ['GET', 'POST'])]
     public function editPassword(Request $request, User $user, UserPasswordHasherInterface $passwordHasher): Response
     {
-        $form = $this->createForm(UserPasswordType::class, $user);
+        $form = $this->createForm(UserPasswordType::class);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            if($passwordHasher->isPasswordValid($user, $form->getData()->getPlainPassword())){
+            if($passwordHasher->isPasswordValid($user, $form->getData()['plainPassword'])){
+                $user->setCreatedAt(new \DateTimeImmutable());
+                $user->setPlainPassword($form->getData()['plainPassword']);
 
-                $user->setPlainPassword($form->getData()->getPlainPassword());
+                $this->em->persist($user);
+                $this->em->flush();
 
                 $this->addFlash('success', 'Le mot de passe a été modifié');
                 return $this->redirectToRoute('home');
+            }else{
+                $this->addFlash('danger', 'Le mot de passe est incorrect');
             }
-        }else{
-            $this->addFlash('danger', 'Le mot de passe est incorrect');
         }
 
         return $this->render('user/edit_password.html.twig', [

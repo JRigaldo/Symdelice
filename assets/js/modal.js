@@ -1,9 +1,10 @@
 jQuery(function ($) {
     $(document).ready(function () {
         function modalAlert() {
-           setTimeout(function(){
-               $('.alert').fadeOut();
-           }, 2000)
+           $('.action-close').click(function(e){
+               e.preventDefault();
+               $(this).parent().hide();
+           });
         }
         modalAlert()
     })
