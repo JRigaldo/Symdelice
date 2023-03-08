@@ -25,7 +25,7 @@
                     </div>
                     {% for flavor in flavors %}
                         {% if flavorCurrent.id == flavor.id %}
-                            {{ include('admin/form/_form.html.twig', { form: form, button: 'Editer' }) }}
+                            {{ include('admin/form/_form-flavor.html.twig', { form: form, button: 'Editer' }) }}
                         {% else %}
                             <div class="table-tr">
                                 <div class="table-th" scope="row">{{ loop.index }}</div>
@@ -36,7 +36,7 @@
                                 <div class="table-td">{{ flavor.inStock }}</div>
                                 <div class="table-td">{{ flavor.getisTopping }}</div>
                                 <div class="table-td">
-                                    <a href="{{ path('admin.flavor.edit', {id: flavor.id, slug: flavor.slug}) }}" class="inline-block">
+                                    <a href="{{ path('flavor.edit', {id: flavor.id, slug: flavor.slug}) }}" class="inline-block">
                                         <button class="btn-icon btn-icon--success">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="26.261" height="26.261"
                                                  viewBox="0 0 26.261 26.261">

@@ -3,8 +3,7 @@
     <a href="{{ path('home') }}" class="header__logo header__logo--down hidden-up"><img src="{{ asset('/images/logo-iceRollDelice-inline.png') }}" alt="logo iceroll delice"></a>
     <nav class="header__nav-links hidden-down">
         <ul>
-            <li><a href="{{ path('login') }}"><span class="iceroll-spirale"><img src="{{ asset('/images/iceroll-spirale.png') }}"
-                                                                                 alt="iceroll spirale"></span></a></li>
+            <li><a href="{{ path('security.logout') }}" class="link--logout">Déconnexion</a></li>
         </ul>
     </nav>
     <div class="navbar--groupe hidden-up">
@@ -34,7 +33,7 @@
         </a>
         <nav class="mobile-menu--text">
             <ul>
-                <li><a href="{{ path('login') }}"><span class="iceroll-spirale"><img src="{{ asset('/images/iceroll-spirale.png') }}" alt="iceroll spirale"></span></a></li>
+                <li><a href="{{ path('security.logout') }}" class="link--logout">Déconnexion</a></li>
             </ul>
         </nav>
     </div>

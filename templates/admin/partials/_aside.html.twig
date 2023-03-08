@@ -1,10 +1,12 @@
+{% set current_page = app.request.get('_route') %}
 <aside class="aside-nav">
     <nav>
         <ul>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Flavors</a></li>
-            <li><a href="#">Costs</a></li>
+            <li><a href="{{ path('admin.dashboard') }}" {% if current_page == 'admin.dashboard' %}class="active"{% endif %}>Dashboard</a></li>
+            <li><a href="#" {% if current_page == 'home' %}class="active"{% endif %}>&Eacute;v&eacute;nements</a></li>
+            <li><a href="#" {% if current_page == 'home' %}class="active"{% endif %}>Clients</a></li>
+            <li><a href="{{ path('flavor.show') }}" {% if current_page == 'flavor.show' %}class="active"{% endif %}>Glaces</a></li>
+            <li><a href="#" {% if current_page == 'home' %}class="active"{% endif %}>Devis</a></li>
         </ul>
     </nav>
 </aside>

@@ -26,7 +26,7 @@ class LoginController extends AbstractController
      * @param AuthenticationUtils $authenticationUtils
      * @return Response
      */
-    #[Route('/login', name: 'security.login', methods: ['GET', 'POST'])]
+    #[Route('/connexion', name: 'security.login', methods: ['GET', 'POST'])]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         $error = $authenticationUtils->getLastAuthenticationError();
@@ -43,7 +43,7 @@ class LoginController extends AbstractController
      * * This controller allow us to logout
      * @return void
      */
-    #[Route('/logout', name: 'security.logout', methods: ['GET'])]
+    #[Route('/deconnexion', name: 'security.logout', methods: ['GET'])]
     public function logout(): void
     {
         # Nothing to do here !
@@ -54,7 +54,7 @@ class LoginController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    #[Route('/registration', name: 'security.registration', methods: ['GET', 'POST'])]
+    #[Route('/enregistrement', name: 'security.registration', methods: ['GET', 'POST'])]
     public function registration(Request $request): Response
     {
         $user = new User;

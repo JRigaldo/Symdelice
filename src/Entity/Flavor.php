@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Cocur\Slugify\Slugify;
 
 #[ORM\Entity(repositoryClass: FlavorRepository::class)]
-#[UniqueEntity('name')]
+#[UniqueEntity('id')]
 class Flavor
 {
 
@@ -96,7 +96,7 @@ class Flavor
 
     public function getFormatedPrice(): string
     {
-        return number_format($this->getPrice(), 0, '.', ' ');
+        return number_format($this->getPrice(), 2, '.', ' ');
     }
 
     public function isStock(): ?bool

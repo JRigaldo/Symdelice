@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace App\Controller;
 
 use App\Entity\Flavor;
 use App\Form\FlavorType;
 use App\Repository\FlavorRepository;
-use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-class AdminController extends AbstractController
+class FlavorController extends AbstractController
 {
 
     public function __construct(FlavorRepository $repository,EntityManagerInterface $entityManager)
@@ -22,31 +21,21 @@ class AdminController extends AbstractController
         $this->em = $entityManager;
     }
 
-    #[Route('/admin', name: 'admin.dashboard', methods: ['GET'])]
-    public function index(FlavorRepository $repository): Response
-    {
-        $flavors = $repository->findAll();
-
-        return $this->render('admin/pages/index.html.twig', [
-            'flavors' => $flavors
-        ]);
-    }
-
     /**
-     * Display all Fflavors
+     * Display all Flavors
      * @param FlavorRepository $repository
      * @return Response
      */
-    #[Route('/admin/flavors/show', name: 'admin.flavor.show', methods: ['GET'])]
+    #[Route('/liste-des-parfums', name: 'flavor.show', methods: ['GET'])]
     public function show(FlavorRepository $repository): Response
     {
         $flavors = $repository->findAll();
-        return $this->render('admin/pages/show.html.twig', [
+        return $this->render('admin/pages/flavor/show.html.twig', [
             'flavors' => $flavors
         ]);
     }
 
-    #[Route('/admin/flavors/create', name: 'admin.flavor.create', methods: ['GET','POST'])]
+    #[Route('/parfum/ajouter', name: 'flavor.create', methods: ['GET','POST'])]
     public function create(Request $request): Response
     {
         $flavors = $this->repo->findAll();
@@ -58,45 +47,47 @@ class AdminController extends AbstractController
             $this->em->persist($FlavorObject);
             $this->em->flush();
             $this->addFlash('success', 'Successfully created');
-            return $this->redirectToRoute('admin.flavor.show');
+            return $this->redirectToRoute('flavor.show');
         }
 
-        return $this->render('admin/pages/create.html.twig',[
+        return $this->render('admin/pages/flavor/create.html.twig',[
             'flavors' => $flavors,
             'form' => $form->createView()
         ]);
     }
 
-    #[Route('/admin/flavors/edit/{slug}-{id}', name: 'admin.flavor.edit', methods: ['GET','POST'], requirements: ['slug' => '[a-z0-9\-]*'])]
+    #[Route('/parfum/editer/{slug}-{id}', name: 'flavor.edit', methods: ['GET','POST'], requirements: ['slug' => '[a-z0-9\-]*'])]
     public function edit(Request $request, Flavor $flavor, string $slug, int $id): Response
     {
         $flavors = $this->repo->findAll();
-        $FlavorObject = $this->repo->findOneBy(['id' => $id]);
-        $form = $this->createForm(FlavorType::class, $FlavorObject);
+
+        $form = $this->createForm(FlavorType::class, $flavor);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $FlavorObject = $form->getData();
+            $flavor = $form->getData();
+            $this->em->persist($flavor);
             $this->em->flush();
+
             $this->addFlash('success', 'Successfully edited');
-            return $this->redirectToRoute('admin.flavor.show');
+            return $this->redirectToRoute('flavor.show');
         }
 
         if($flavor->getSlug() !== $slug){
-            return $this->redirectToRoute('admin/flavors/show', [
+            return $this->redirectToRoute('flavor.show', [
                 'id' => $flavor->getId(),
                 'slug' => $flavor->getSlug()
             ], 301);
         }
 
-        return $this->render('admin/pages/edit.html.twig',[
+        return $this->render('admin/pages/flavor/edit.html.twig',[
             'flavors' => $flavors,
             'flavorCurrent' => $flavor,
             'form' => $form->createView()
         ]);
     }
 
-    #[Route('/admin/flavors/edit/{id}', name: 'admin.flavor.delete', methods: ['GET', 'POST'])]
+    #[Route('/parfum/supprimer/{id}', name: 'flavor.delete', methods: ['GET', 'POST'])]
     public function delete(Flavor $flavor, Request $request): Response
     {
         if($this->isCsrfTokenValid('delete' . $flavor->getId(), $request->get('_token'))){
@@ -104,6 +95,6 @@ class AdminController extends AbstractController
             $this->em->flush();
             $this->addFlash('danger', 'Successfully removed');
         }
-        return $this->redirectToRoute('admin.flavor.show');
+        return $this->redirectToRoute('flavor.show');
     }
 }

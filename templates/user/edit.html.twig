@@ -8,16 +8,21 @@
         {{ include("partials/_social-header.html.twig") }}
         <div class="background-gradient-2"></div>
         <section>
-            {% for label, messages in app.flashes %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ label }}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endfor %}
             <div class="container">
                 {{ form_start(form, {'attr': {'class': 'form-container mb-100'}}) }}
                     <div class="form">
+                        {% for label, messages in app.flashes %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ label }}">
+                                    {{ message }}
+                                    <div class="alert-cross action-close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16.363" height="16.363" viewBox="0 0 16.363 16.363">
+                                            <path id="close_FILL0_wght400_GRAD0_opsz48_1_" data-name="close_FILL0_wght400_GRAD0_opsz48 (1)" d="M208.259,319.363,207,318.1l6.923-6.923L207,304.259,208.259,303l6.923,6.923L222.1,303l1.259,1.259-6.923,6.923,6.923,6.923-1.259,1.259-6.923-6.923Z" transform="translate(-207 -303)" fill="#fff"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
                         <div class="row-top gutter">
                             <div class="col-md-12">
                                 <div class="pt-30">

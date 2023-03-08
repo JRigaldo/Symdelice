@@ -20,7 +20,6 @@ class FlavorType extends AbstractType
                 TextFieldType::class,
                 [
                     'label' => 'Nom',
-                    'mapped' => true,
                     'required' => true,
                     'attr' => [
                         'minlength' => '2',
@@ -36,7 +35,6 @@ class FlavorType extends AbstractType
                 MoneyFieldType::class,
                 [
                     'label' => 'Prix CHF',
-                    'mapped' => true,
                     'required' => true,
                     'constraints' => [
                         new Assert\Positive(),

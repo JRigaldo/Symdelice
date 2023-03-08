@@ -41,7 +41,7 @@
       font-weight: var(--body-bold);
       transition-duration: 0.3s;
       &:hover{
-        @include text-gradient;
+        color: var(--gray-dark);
       }
       &.active,
       &.active:hover{
@@ -81,3 +81,8 @@
     background-color: var(--black);
   }
 }
+
+.header__nav-links ul li a.link--logout{
+  font-weight: var(--body-regular);
+}
+

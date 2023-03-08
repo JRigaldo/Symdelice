@@ -10,20 +10,23 @@
 }
 
 .aside-nav ul li {
-  padding: 1rem 0;
   border-bottom: 1px solid var(--gray-300);
 
   a {
+    padding: 1rem 0;
     color: var(--gray-dark);
     font-size: 0.9rem;
     transition-duration: 0.3s;
     padding-left: 15px;
+    cursor: pointer;
 
     &:hover,
-    &:active,
-    &:focus,
-    &.active {
+    &:focus {
+      background-color: var(--gray-300);
+    }
+    &.active{
       color: var(--theme-primary);
+      font-weight: var(--body-bold);
     }
   }
 }

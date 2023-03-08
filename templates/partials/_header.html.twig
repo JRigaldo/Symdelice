@@ -1,13 +1,14 @@
+{% set current_page = app.request.get('_route') %}
 <header class="header">
     <a href="{{ path('home') }}" class="header__logo header__logo--up ml-10 hidden-down"><img src="{{ asset('/images/logo-iceRollDelice-inline.png') }}" alt="logo iceroll delice"></a>
     <a href="{{ path('home') }}" class="header__logo header__logo--down hidden-up"><img src="{{ asset('/images/logo-iceRollDelice-inline.png') }}" alt="logo iceroll delice"></a>
     <nav class="header__nav-links hidden-down">
         <ul>
-            <li><a href="{{ path('home') }}" class="active">Accueil</a></li>
-            <li><a href="{{ path('event') }}">Événement</a></li>
-            <li><a href="{{ path('price') }}">Carte & Prix</a></li>
-            <li><a href="{{ path('concept') }}">Le concept</a></li>
-            <li><a href="{{ path('contact') }}">Contact</a></li>
+            <li><a href="{{ path('home') }}" {% if current_page == 'home' %}class="active"{% endif %}>Accueil</a></li>
+            <li><a href="{{ path('event') }}" {% if current_page == 'event' %}class="active"{% endif %}>Événement</a></li>
+            <li><a href="{{ path('price') }}" {% if current_page == 'price' %}class="active"{% endif %}>Carte & Prix</a></li>
+            <li><a href="{{ path('concept') }}" {% if current_page == 'concept' %}class="active"{% endif %}>Le concept</a></li>
+            <li><a href="{{ path('contact') }}" {% if current_page == 'contact' %}class="active"{% endif %}>Contact</a></li>
             <li><a href="{{ path('security.login') }}"><span class="iceroll-spirale"><img src="{{ asset('/images/iceroll-spirale.png') }}"
                                                                alt="iceroll spirale"></span></a></li>
         </ul>
@@ -36,12 +37,12 @@
         </a>
         <nav class="mobile-menu--text">
             <ul>
-                <li><a href="{{ path('home') }}" class="active">Accueil</a></li>
-                <li><a href="{{ path('event') }}">Événement</a></li>
-                <li><a href="{{ path('price') }}">Carte & Prix</a></li>
-                <li><a href="{{ path('concept') }}">Le concept</a></li>
-                <li><a href="{{ path('contact') }}">Contact</a></li>
-                <li><a href="{{ path('security.login') }}"><span class="iceroll-spirale"><img src="{{ asset('/images/iceroll-spirale.png') }}" alt="iceroll spirale"></span></a></li>
+                <li><a href="{{ path('home') }}" {% if current_page == 'home' %}class="active"{% endif %}>Accueil</a></li>
+                <li><a href="{{ path('event') }}" {% if current_page == 'event' %}class="active"{% endif %}>Événement</a></li>
+                <li><a href="{{ path('price') }}" {% if current_page == 'price' %}class="active"{% endif %}>Carte & Prix</a></li>
+                <li><a href="{{ path('concept') }}" {% if current_page == 'concept' %}class="active"{% endif %}>Le concept</a></li>
+                <li><a href="{{ path('contact') }}" {% if current_page == 'contact' %}class="active"{% endif %}>Contact</a></li>
+                <li><a href="{{ path('security.login') }}"><span>Connexion</span><span class="iceroll-spirale"><img src="{{ asset('/images/iceroll-spirale.png') }}" alt="iceroll spirale"></span></a></li>
             </ul>
         </nav>
         <nav class="social--row-icon">

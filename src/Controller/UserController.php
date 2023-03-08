@@ -28,7 +28,7 @@ class UserController extends AbstractController
      * @param User $user
      * @return Response
      */
-    #[Route('/admin/user/edit/{id}', name: 'admin.user.edit', methods: ['GET', 'POST'])]
+    #[Route('/utilisateur/editer/{id}', name: 'user.edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, User $user, UserPasswordHasherInterface $passwordHasher): Response
     {
         if(!$this->getUser()){
@@ -60,15 +60,30 @@ class UserController extends AbstractController
         ]);
     }
 
-    #[Route('/utilisateur/edition-du-mot-de-passe/{id}', name: 'admin.edit.password', methods: ['GET', 'POST'])]
+    /**
+     * This controller allow us to edit user password
+     * @param Request $request
+     * @param User $user
+     * @param UserPasswordHasherInterface $passwordHasher
+     * @return Response
+     */
+    #[Route('/utilisateur/edition-du-mot-de-passe/{id}', name: 'edit.password', methods: ['GET', 'POST'])]
     public function editPassword(Request $request, User $user, UserPasswordHasherInterface $passwordHasher): Response
     {
+        if(!$this->getUser()){
+            return $this->redirectToRoute('security.login');
+        }
+
+        if($this->getUser() !== $user){
+            return $this->redirectToRoute('home');
+        }
+
         $form = $this->createForm(UserPasswordType::class);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             if($passwordHasher->isPasswordValid($user, $form->getData()['plainPassword'])){
                 $user->setCreatedAt(new \DateTimeImmutable());
-                $user->setPlainPassword($form->getData()['plainPassword']);
+                $user->setPlainPassword($form->getData()['newPassword']);
 
                 $this->em->persist($user);
                 $this->em->flush();

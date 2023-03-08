@@ -20,7 +20,10 @@ class MoneyFieldType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'currency' => 'CHF'
+            'currency' => 'CHF',
+            'scale' => 2,
+            'divisor' => 100,
+            'compound' => false,
         ));
     }
 
